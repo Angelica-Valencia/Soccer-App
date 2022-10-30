@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
+             x:Class="Soccer_App.LeaguePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     Margin="20"
+                     Spacing="20"
+                     HorizontalOptions="Center"
+                     >
+            <StackLayout>
+                <Frame CornerRadius="20"
+                       HeightRequest="85"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="Prime Leagues.png"/>
+                </Frame>
+                <Label x:Name="lable_primeLeagues"
+                       Text="Prime
+                       Leagues"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+                
+
+            </StackLayout>
+
+            <StackLayout>
+                <Frame CornerRadius="20"
+                       HeightRequest="85"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="MLS, MX, Concacaf.jpeg"/>
+                </Frame>
+                <Label x:Name="lable_concacafLeagues"
+                       Text="USA, MX and CONCACAF"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+                
+
+            </StackLayout>
+
+            <StackLayout>
+                <Frame CornerRadius="20"
+                       HeightRequest="85"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="Europe Leagues.png"/>
+                </Frame>
+                <Label x:Name="lable_europeLeagues"
+                       Text="Europe Leagues"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="2"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     Margin="20"
+                     Spacing="20"
+                     HorizontalOptions="Center"
+                     >
+            <StackLayout>
+                <Frame CornerRadius="20"
+                       HeightRequest="85"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="conmebol.jpeg"/>
+                </Frame>
+                <Label x:Name="lable_SALeagues"
+                       Text="South America"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+                
+
+            </StackLayout>
+
+            <StackLayout>
+                <Frame CornerRadius="20"
+                       HeightRequest="85"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="African_Asia_Leagues.png"/>
+                </Frame>
+                <Label x:Name="lable_asiaAfricaLeagues"
+                       Text="Africa and Asia"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+                
+
+            </StackLayout>
+
+            <StackLayout>
+                <Frame CornerRadius="20"
+                       HeightRequest="82"
+                       Padding="0"
+                       IsClippedToBounds="True">
+
+                    <Image Source="World Cup FIFA.jpeg"/>
+
+                </Frame>
+
+                <Label x:Name="lable_internationalLeagues"
+                       Text="International"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,5,0,0"/>
+
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout Grid.Row="3"
+                     Orientation="Horizontal"
+                     Grid.ColumnSpan="3"
+                     Spacing="20"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Frame CornerRadius="15"
+                   Padding="0"
+                   IsClippedToBounds="True"
+                   BorderColor="Transparent"
+                   HasShadow="False"
+                   Background="#85929E"
+                   Opacity="0.33"
+                   >
+
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,0,0,0"
+                             WidthRequest="280">
+
+                    <Image Source="search.png"
+                           Scale="1"
+                           Margin="10,0,0,0"/>
+                    <Entry x:Name="entrySearch"
+                       Placeholder="Search"
+                       TextColor="#FFFDFD"
+                       PlaceholderColor="#FFFDFD"
+                       FontSize="25"
+                       FontAttributes="None"
+                       WidthRequest="290"/>
+
+                </StackLayout>
+
+            </Frame>
+            <Label x:Name="labelSeeAll"
+                   Text="See all"
+                   VerticalOptions="Center"
+                   TextDecorations="Underline"/>
+
+        </StackLayout>
+
+        <StackLayout Grid.Row="4"
+                     Grid.ColumnSpan="3"
+                     Margin="20,0"
+                     HorizontalOptions="Center"
+                     >
+        <CollectionView  Margin="5,20,0,0"
+                         HorizontalOptions="Center"
+                         ItemsSource="{Binding LeaguesList}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical"
+                             VerticalItemSpacing="30"
+                             HorizontalItemSpacing="20"
+                             Span="2"
+                             />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal"
+                             HeightRequest="50"
+                             VerticalOptions="Center">
+
+                    <Frame WidthRequest="20"
+                           Padding="5"
+                           IsClippedToBounds="True"
+                           HasShadow="False">
+                        <Image Source="{Binding league.logo}" VerticalOptions="Start"/>
+
+                    </Frame>
+                    <StackLayout WidthRequest="150">
+
+                        <Label Text="{Binding league.name}"
+                               FontSize="13"
+                               FontAttributes="Bold"/>
+
+                        <StackLayout Orientation="Horizontal"
+                                     WidthRequest="100"
+                                     VerticalOptions="Fill"
+                                     HorizontalOptions="Start">
+                            <!--<Frame CornerRadius="30"
+                                   Padding="0"
+                                   IsClippedToBounds="True"
+                                   BorderColor="Transparent"
+                                   HasShadow="False"
+                                   WidthRequest="30">
+                                <Image >
+                                <Image.Source>
+                                    <svg:SvgImageSource Source="{Binding country.flag}"/>
+                                </Image.Source>
+                            </Image>
+
+                            </Frame>-->
+
+                            
+                            <Label Text="{Binding country.name}"
+                                   FontSize="13"/>
+
+                        </StackLayout>
+                    </StackLayout>
+                    
+                    <Frame WidthRequest="30"
+                           HeightRequest="30"
+                           Padding="0"
+                           IsClippedToBounds="True"
+                           HasShadow="False"
+                           VerticalOptions="Start">
+
+                        <Image Source="group.png" VerticalOptions="Start" />
+
+                        </Frame>
+
+                </StackLayout>
+
+            </DataTemplate>
+
+        </CollectionView.ItemTemplate>
+
+
+    </CollectionView>
+
+    </StackLayout>
+
+    </Grid>
+   
+    
+
+</ContentPage>
+    
