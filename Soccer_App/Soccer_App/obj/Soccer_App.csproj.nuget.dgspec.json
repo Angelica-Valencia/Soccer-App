@@ -75,6 +75,10 @@
             "Xamarin.Forms.Svg": {
               "target": "Package",
               "version": "[1.0.3, )"
+            },
+            "YoutubeExplode": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [

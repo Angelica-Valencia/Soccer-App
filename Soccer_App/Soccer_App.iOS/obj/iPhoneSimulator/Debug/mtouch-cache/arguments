@@ -19,9 +19,11 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/OpenTK-1.0.dll \
 	'\"--reference=/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/bin/Debug/netstandard2.0/Soccer_App.dll\"' \
+	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Buffers.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Drawing.Common.dll \
+	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Memory.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Numerics.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Numerics.Vectors.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
@@ -31,7 +33,6 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Registry.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/netstandard.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.AppContext.dll \
-	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Buffers.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.Concurrent.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.NonGeneric.dll \
@@ -74,7 +75,6 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.Expressions.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.Parallel.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.Queryable.dll \
-	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Memory.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Net.AuthenticationManager.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Net.Cache.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Net.HttpListener.dll \
@@ -168,13 +168,19 @@
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/anglesharp/0.17.0/lib/netstandard2.0/AngleSharp.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/google.apis/1.57.0/lib/netstandard2.0/Google.Apis.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/google.apis.core/1.57.0/lib/netstandard2.0/Google.Apis.Core.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/newtonsoft.json/13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/pclstorage/1.0.2/lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/pclstorage/1.0.2/lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/skiasharp/1.60.0/lib/XamariniOS/SkiaSharp.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/skiasharp.svg/1.60.0/lib/netstandard2.0/SkiaSharp.Extended.Svg.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/system.text.encoding.codepages/5.0.0/runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/system.text.encodings.web/6.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/system.text.json/6.0.6/lib/netstandard2.0/System.Text.Json.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/xam.formsplugin.iconentry/1.1.1/lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/xam.formsplugin.iconentry/1.1.1/lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/xamarin.communitytoolkit/2.0.5/lib/xamarinios10/Xamarin.CommunityToolkit.dll \
@@ -219,5 +225,6 @@
 	--reference=/Users/angelicavalencia/.nuget/packages/xamarin.forms/5.0.0.2515/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/xamarin.forms.svg/1.0.3/lib/Xamarin.iOS10/SvgImageSource.dll \
 	--reference=/Users/angelicavalencia/.nuget/packages/xamarin.forms.svg/1.0.3/lib/Xamarin.iOS10/SvgImageSource.iOS.dll \
+	--reference=/Users/angelicavalencia/.nuget/packages/youtubeexplode/6.2.3/lib/netstandard2.1/YoutubeExplode.dll \
 	'\"--reference=/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/bin/Debug/netstandard2.0/Soccer_App.dll\"' \
 	'@/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/response-file.rsp' \

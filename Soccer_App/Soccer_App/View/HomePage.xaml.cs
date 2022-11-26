@@ -11,8 +11,6 @@ namespace Soccer_App.View
         {
             InitializeComponent();
             this.BindingContext = new VM_Home(Navigation);
-            this.BindingContext = new VM_LeaguesList(Navigation);
-
         }
     }
 }

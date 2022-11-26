@@ -9,6 +9,9 @@ using Soccer_App.Model;
 using Soccer_App.Service;
 using Xamarin.CommunityToolkit;
 using System.Linq;
+using YoutubeExplode;
+using YoutubeExplode.Videos.Streams;
+using Xamarin.CommunityToolkit.Core;
 
 
 namespace Soccer_App.ViewModel
@@ -18,6 +21,7 @@ namespace Soccer_App.ViewModel
         #region: VARIABLES
         IList<Datum> _mediaList;
         IList<Datum> _mediaBackUp;
+        string youtubeURL;
         #endregion
 
         #region: CONSTRUCTORS
@@ -31,6 +35,19 @@ namespace Soccer_App.ViewModel
         #endregion
 
         #region: Properties
+
+        public string YoutubeURL
+        {
+            get
+            {
+                return youtubeURL;
+            }
+            set
+            {
+                SetValue(ref youtubeURL, value);
+                OnPropertyChanged();
+            }
+        }
 
 
         public IList<Datum> MediaList
@@ -69,25 +86,18 @@ namespace Soccer_App.ViewModel
 
         public async Task DisplayMedia()
         {
-            //try
-            //{
-            //    API_Helper2 MyInfo = new API_Helper2();
-            //    var media = await MyInfo.GetMedia();
+            var youtube = new YoutubeClient();
+            var streamManifest = await youtube.Videos.Streams.GetManifestAsync("https://www.youtube.com/watch?v=PLZo8rCYfuY&ab_channel=LaLigaSantander");
+            var streamInfo = streamManifest.GetMuxedStreams().GetWithHighestVideoQuality();
 
-            //    for (int i = 0; i < media.Count; i++)
-            //    {
-            //        if (media[i].section.name.source.sport_id == 1)
-            //        {
-            //            MediaList.Add(media.data[i]);
-            //        }
+            if (streamInfo != null)
+            {
+                // Get the actual stream
+                var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
+                var source = streamInfo.Url;
+                youtubeURL = source.Replace("&","&amp;");
 
-            //    }
-
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
+            }
 
         }
         #endregion

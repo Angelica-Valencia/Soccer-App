@@ -29,4 +29,15 @@
 /Users/angelicavalencia/.nuget/packages/skiasharp/1.60.0/lib/XamariniOS/SkiaSharp.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/bin/Debug/netstandard2.0/Soccer_App.dll
 /Users/angelicavalencia/.nuget/packages/xamarin.forms/5.0.0.2515/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/16.0.0.72/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.Extensions.dll
+/Users/angelicavalencia/.nuget/packages/youtubeexplode/6.2.3/lib/netstandard2.1/YoutubeExplode.dll
+/Users/angelicavalencia/.nuget/packages/anglesharp/0.17.0/lib/netstandard2.0/AngleSharp.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/16.0.0.72/lib/mono/Xamarin.iOS/Facades/System.Buffers.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/16.0.0.72/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.CodePages.dll
+/Users/angelicavalencia/.nuget/packages/system.text.json/6.0.6/lib/netstandard2.0/System.Text.Json.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/16.0.0.72/lib/mono/Xamarin.iOS/Facades/System.Memory.dll
+/Users/angelicavalencia/.nuget/packages/system.text.encodings.web/6.0.0/lib/netstandard2.0/System.Text.Encodings.Web.dll
+/Users/angelicavalencia/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/16.0.0.72/lib/mono/Xamarin.iOS/System.Numerics.Vectors.dll
+/Users/angelicavalencia/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/angelicavalencia/.nuget/packages/newtonsoft.json/13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll

@@ -19,6 +19,7 @@
     <PackageReference Include="Xam.FormsPlugin.IconEntry" Version="1.1.1" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
     <PackageReference Include="Google.Apis" Version="1.57.0" />
+    <PackageReference Include="YoutubeExplode" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +32,7 @@
     <None Remove="Xam.FormsPlugin.IconEntry" />
     <None Remove="Xamarin.CommunityToolkit" />
     <None Remove="Google.Apis" />
+    <None Remove="YoutubeExplode" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="LeaguePage.xaml" />

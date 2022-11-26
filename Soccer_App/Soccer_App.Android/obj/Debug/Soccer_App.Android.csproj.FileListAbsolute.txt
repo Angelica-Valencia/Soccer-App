@@ -67,6 +67,7 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/res/mipmap-xxxhdpi/launcher_foreground.png
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/uploadflags.txt
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/resolvedassemblies.hash
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/AngleSharp.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/FormsViewGroup.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/FormsViewGroup.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Google.Apis.Core.dll
@@ -79,6 +80,7 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/IconEntry.FormsPlugin.Android.dll.mdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Java.Interop.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Java.Interop.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Mono.Android.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Mono.Android.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Mono.Security.dll
@@ -97,6 +99,7 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Soccer_App.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/SvgImageSource.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/SvgImageSource.Droid.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Buffers.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.ComponentModel.Composition.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.ComponentModel.Composition.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Core.dll
@@ -114,6 +117,7 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.IO.Compression.FileSystem.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.IO.Compression.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.IO.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Memory.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Net.Http.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Net.Http.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Numerics.dll
@@ -122,12 +126,18 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Numerics.Vectors.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Resources.ResourceManager.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Runtime.CompilerServices.Unsafe.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Runtime.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Runtime.Serialization.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.ServiceModel.Internals.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.ServiceModel.Internals.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Text.Encoding.CodePages.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Text.Encoding.CodePages.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Text.Encodings.Web.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Text.Json.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Threading.Tasks.Extensions.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Transactions.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Transactions.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/System.Web.Services.dll
@@ -253,6 +263,7 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Xamarin.Google.Android.Material.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Xamarin.Google.Android.Material.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/Xamarin.Google.Guava.ListenableFuture.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/assets/YoutubeExplode.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/typemaps.arm64-v8a.ll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/typemaps.armeabi-v7a.ll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.Android/obj/Debug/android/typemaps.x86.ll

@@ -3,11 +3,13 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Soccer_App.Android.dll" comes first in this list. */
 		"Soccer_App.Android.dll",
+		"AngleSharp.dll",
 		"FormsViewGroup.dll",
 		"Google.Apis.Core.dll",
 		"Google.Apis.dll",
 		"IconEntry.FormsPlugin.Abstractions.dll",
 		"IconEntry.FormsPlugin.Android.dll",
+		"Microsoft.Bcl.AsyncInterfaces.dll",
 		"Newtonsoft.Json.dll",
 		"PCLStorage.Abstractions.dll",
 		"PCLStorage.dll",
@@ -16,6 +18,8 @@ public class MonoPackageManager_Resources {
 		"Soccer_App.dll",
 		"SvgImageSource.dll",
 		"SvgImageSource.Droid.dll",
+		"System.Text.Encodings.Web.dll",
+		"System.Text.Json.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.Annotation.Experimental.dll",
@@ -76,6 +80,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"YoutubeExplode.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};
