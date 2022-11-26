@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{4C0E9766-CDB9-466E-914F-C815C2C6F49D}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/View/MyFlyoutPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/Service/API-Helper2.cs">
     <Files>
-      <File FileName="Soccer_App/Soccer_App/View/MyFlyoutPage.xaml" Line="13" Column="37" />
-      <File FileName="Soccer_App/Soccer_App/View/MyFlyoutPage.xaml.cs" Line="33" Column="38" />
-      <File FileName="Soccer_App/Soccer_App/Model/FlyoutItemPage_Model.cs" Line="15" Column="48" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" Line="92" Column="1" />
-      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" Line="1" Column="1" />
-      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" Line="12" Column="13" />
-      <File FileName="Soccer_App/Soccer_App.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" Line="258" Column="51" />
+      <File FileName="Soccer_App/Soccer_App/Service/API-Helper.cs" />
+      <File FileName="Soccer_App/Soccer_App/Service/API-Helper2.cs" Line="93" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml.cs" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" />
+      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" />
+      <File FileName="Soccer_App/Soccer_App/Model/LeguesModel2.cs" />
+      <File FileName="Soccer_App/Soccer_App/Model/LeaguesModel.cs" />
+      <File FileName="Soccer_App/Soccer_App.iOS/Main.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Soccer_App" expanded="True">
+          <Node name="Soccer_App" expanded="True" selected="True">
             <Node name="Soccer_App" expanded="True">
               <Node name="Model" expanded="True" />
               <Node name="Service" expanded="True" />
@@ -24,7 +23,9 @@
                 <Node name="HomePage.xaml" expanded="True" />
                 <Node name="LeaguesPage.xaml" expanded="True" />
                 <Node name="LivePage.xaml" expanded="True" />
-                <Node name="MyFlyoutPage.xaml" expanded="True" />
+                <Node name="MyFlyout.xaml" expanded="True" />
+                <Node name="MyNavigationShell.xaml" expanded="True" />
+                <Node name="MyTabbedPage.xaml" expanded="True" />
                 <Node name="SettingsPage.xaml" expanded="True" />
               </Node>
               <Node name="ViewModel" expanded="True" />
@@ -32,22 +33,22 @@
             </Node>
             <Node name="Soccer_App.iOS" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>leagues</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.ItemProperties.Soccer__App.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8FC422F7-01CB-48C3-A01A-0B9055E1EF7A" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Soccer__App.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/ViewModel/VM_Home.cs" relfile="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" line="86" column="1" />
+      <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.Soccer__App.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8FC422F7-01CB-48C3-A01A-0B9055E1EF7A" />
 </Properties>

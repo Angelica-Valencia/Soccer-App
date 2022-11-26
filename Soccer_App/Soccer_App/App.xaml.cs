@@ -13,7 +13,7 @@ namespace Soccer_App
             InitializeComponent();
             SvgImageSource.RegisterAssembly();
 
-            MainPage = new MyFlyoutPage();
+            MainPage = new MyNavigationShell();
         }
 
         protected override void OnStart()

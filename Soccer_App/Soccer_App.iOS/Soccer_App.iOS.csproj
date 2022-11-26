@@ -136,6 +136,12 @@
     <PackageReference Include="Xam.FormsPlugin.IconEntry">
       <Version>1.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.CommunityToolkit">
+      <Version>2.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Google.Apis">
+      <Version>1.57.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -159,6 +165,7 @@
     <BundleResource Include="Resources\live.png" />
     <BundleResource Include="Resources\setting-lines.png" />
     <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\MLS, MX, Concacaf.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

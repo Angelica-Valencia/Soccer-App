@@ -10,7 +10,7 @@ namespace Soccer_App.View
         {
             InitializeComponent();
             this.BindingContext = new VM_LeaguesList(Navigation);
+            
         }
     }
 }
-

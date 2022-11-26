@@ -9,16 +9,40 @@
     ".NETStandard,Version=v2.0/": {
       "Soccer_App/1.0.0": {
         "dependencies": {
+          "Google.Apis": "1.57.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
           "PCLStorage": "1.0.2",
           "Xam.FormsPlugin.IconEntry": "1.1.1",
+          "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.Svg": "1.0.3"
         },
         "runtime": {
           "Soccer_App.dll": {}
+        }
+      },
+      "Google.Apis/1.57.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.57.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          }
+        }
+      },
+      "Google.Apis.Core/1.57.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.57.0.0",
+            "fileVersion": "1.57.0.0"
+          }
         }
       },
       "Microsoft.Bcl/1.1.6": {
@@ -99,6 +123,44 @@
           }
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.28619.1"
+          }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
+            "assemblyVersion": "4.2.0.1",
+            "fileVersion": "4.6.28619.1"
+          }
+        }
+      },
       "Xam.FormsPlugin.IconEntry/1.1.1": {
         "dependencies": {
           "Xamarin.Forms": "5.0.0.2515"
@@ -107,6 +169,19 @@
           "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
             "assemblyVersion": "1.1.1.0",
             "fileVersion": "1.1.1.0"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.5": {
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -156,6 +231,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Google.Apis/1.57.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-30V7T2G98HQjfI6y0AzBOXJUu7j7Trl1ZzH0e6DKmUaXNCvdMPwxApjBKESeTOkWjMdFRmkpAGyDEoxim+Xq1A==",
+      "path": "google.apis/1.57.0",
+      "hashPath": "google.apis.1.57.0.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.57.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5wuY88PewhfaWsk37EEHcwU6CFqxpaWMm20ogWLXmaCw8NbTlV/Lna0gjtr2jpTLgb3mtVa7RC1AG/mgi530SQ==",
+      "path": "google.apis.core/1.57.0",
+      "hashPath": "google.apis.core.1.57.0.nupkg.sha512"
     },
     "Microsoft.Bcl/1.1.6": {
       "type": "package",
@@ -227,12 +316,47 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
+    "System.Reflection.Emit.ILGeneration/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AucBYo3DSI0IDxdUjKksBcQJXPHyoPyrCXYURW1WDsLI4M65Ar/goSHjdnHOAY9MiYDNKqDlIgaYm+zL2hA1KA==",
+      "path": "system.reflection.emit.ilgeneration/4.7.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.3",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
     "Xam.FormsPlugin.IconEntry/1.1.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-jqNHcLEI4CC/ZPfbZ5H0BaPgyF7JRup8oG4p4pDqS/ULzJK5V/RLv9vIPkuobnhqLYIN4E6ZY380J+jUsWXbeA==",
       "path": "xam.formsplugin.iconentry/1.1.1",
       "hashPath": "xam.formsplugin.iconentry.1.1.1.nupkg.sha512"
+    },
+    "Xamarin.CommunityToolkit/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8oFY5ZrKoIOCqtTeRh+jx5TAcs177TU0pEoefMWRptrq+TZoKwsPNg7L8lBtLSP+2ymg4VBn8i/6chA6b4mGdQ==",
+      "path": "xamarin.communitytoolkit/2.0.5",
+      "hashPath": "xamarin.communitytoolkit.2.0.5.nupkg.sha512"
     },
     "Xamarin.Essentials/1.7.3": {
       "type": "package",

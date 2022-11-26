@@ -1,82 +1,87 @@
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.iOS.exe
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.iOS.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/PCLStorage.Abstractions.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/PCLStorage.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.Extended.Svg.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/IconEntry.FormsPlugin.Abstractions.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/IconEntry.FormsPlugin.iOS.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/da/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/de/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/el/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/es/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/fi/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/fr/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/he/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/hi/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/hr/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/hu/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/id/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/it/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ja/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ko/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ms/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/nb/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/nl/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/pl/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/pt/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ro/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ru/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/sk/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/sv/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/th/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/tr/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/uk/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/vi/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SvgImageSource.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SvgImageSource.iOS.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.dll
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/actool/_ProcessedImageAssetsPath.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/ibtool/_ProcessedInterfaceDefinitionsPath.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/coremlc/_PartialAppManifest.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/coremlc/_BundleResourceWithLogicalName.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/coremlc/_ProcessedCoreMLModelsPath.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/_ProcessedBundleResourcesPath.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/_ProcessedContentPath.items
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/Europe Leagues.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/African_Asia_Leagues.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/Prime Leagues.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/group.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/search.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/football.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/home.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/live.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/setting-lines.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/hamburger.png
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.csproj.AssemblyReference.cache
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.csproj.CoreCompileInputs.cache
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.csproj.CopyComplete
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.exe
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Mobile/Assessment Part B/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.iOS.exe
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.iOS.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Google.Apis.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Google.Apis.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Google.Apis.Core.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Google.Apis.Core.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/PCLStorage.Abstractions.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/PCLStorage.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.Extended.Svg.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/IconEntry.FormsPlugin.Abstractions.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/IconEntry.FormsPlugin.iOS.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.CommunityToolkit.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/da/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/de/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/el/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/es/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/fi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/fr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/he/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/hi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/hr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/hu/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/id/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/it/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ja/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ko/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ms/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/nb/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/nl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/pl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/pt/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ro/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/ru/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/sk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/sv/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/th/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/tr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/uk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/vi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SvgImageSource.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/SvgImageSource.iOS.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.dll
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/bin/iPhoneSimulator/Debug/Soccer_App.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/actool/_ProcessedImageAssetsPath.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/coremlc/_PartialAppManifest.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/coremlc/_BundleResourceWithLogicalName.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/_ProcessedBundleResourcesPath.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/_ProcessedContentPath.items
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/Europe Leagues.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/African_Asia_Leagues.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/Prime Leagues.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/group.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/search.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/football.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/home.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/live.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/setting-lines.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/hamburger.png
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.csproj.AssemblyReference.cache
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.csproj.CoreCompileInputs.cache
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.csproj.CopyComplete
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.exe
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App.iOS/obj/iPhoneSimulator/Debug/Soccer_App.iOS.pdb

@@ -17,6 +17,8 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Xamarin.Forms.Svg" Version="1.0.3" />
     <PackageReference Include="Xam.FormsPlugin.IconEntry" Version="1.1.1" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+    <PackageReference Include="Google.Apis" Version="1.57.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +29,8 @@
     <None Remove="Service\" />
     <None Remove="Xamarin.Forms.Svg" />
     <None Remove="Xam.FormsPlugin.IconEntry" />
+    <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="Google.Apis" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="LeaguePage.xaml" />

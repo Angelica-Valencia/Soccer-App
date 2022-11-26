@@ -2,33 +2,81 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Google.Apis/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.57.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Core/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "PCLStorage/1.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         },
         "runtime": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         }
       },
       "SkiaSharp/1.60.0": {
         "type": "package",
         "compile": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/osx/native/libSkiaSharp.dylib": {
@@ -72,12 +120,39 @@
           "Xamarin.Forms": "[2.5.0, 4.0.0)"
         },
         "compile": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -91,25 +166,45 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -227,21 +322,31 @@
           "Xamarin.Forms": "3.0.0.482510"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Soccer_App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.57.0",
           "Newtonsoft.Json": "13.0.1",
           "PCLStorage": "1.0.2",
           "Xam.FormsPlugin.IconEntry": "1.1.1",
+          "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.Svg": "1.0.3"
@@ -255,33 +360,81 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Google.Apis/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.57.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Core/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "PCLStorage/1.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         },
         "runtime": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         }
       },
       "SkiaSharp/1.60.0": {
         "type": "package",
         "compile": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp.Svg/1.60.0": {
@@ -311,12 +464,39 @@
           "Xamarin.Forms": "[2.5.0, 4.0.0)"
         },
         "compile": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -330,25 +510,45 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -466,21 +666,31 @@
           "Xamarin.Forms": "3.0.0.482510"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Soccer_App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.57.0",
           "Newtonsoft.Json": "13.0.1",
           "PCLStorage": "1.0.2",
           "Xam.FormsPlugin.IconEntry": "1.1.1",
+          "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.Svg": "1.0.3"
@@ -494,33 +704,81 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Google.Apis/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.57.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Core/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "PCLStorage/1.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         },
         "runtime": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         }
       },
       "SkiaSharp/1.60.0": {
         "type": "package",
         "compile": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp.Svg/1.60.0": {
@@ -550,12 +808,39 @@
           "Xamarin.Forms": "[2.5.0, 4.0.0)"
         },
         "compile": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -569,25 +854,45 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -705,21 +1010,31 @@
           "Xamarin.Forms": "3.0.0.482510"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Soccer_App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.57.0",
           "Newtonsoft.Json": "13.0.1",
           "PCLStorage": "1.0.2",
           "Xam.FormsPlugin.IconEntry": "1.1.1",
+          "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.Svg": "1.0.3"
@@ -733,33 +1048,81 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Google.Apis/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.57.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Core/1.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "PCLStorage/1.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         },
         "runtime": {
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {},
-          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {}
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll": {
+            "related": ".Abstractions.xml;.xml"
+          }
         }
       },
       "SkiaSharp/1.60.0": {
         "type": "package",
         "compile": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/XamariniOS/SkiaSharp.dll": {}
+          "lib/XamariniOS/SkiaSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp.Svg/1.60.0": {
@@ -789,12 +1152,39 @@
           "Xamarin.Forms": "[2.5.0, 4.0.0)"
         },
         "compile": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {},
-          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {}
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/IconEntry.FormsPlugin.iOS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -808,25 +1198,45 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+          "lib/xamarinios10/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
+            "related": ".iOS.pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -944,21 +1354,31 @@
           "Xamarin.Forms": "3.0.0.482510"
         },
         "compile": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/Xamarin.iOS10/SvgImageSource.dll": {},
-          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {}
+          "lib/Xamarin.iOS10/SvgImageSource.dll": {
+            "related": ".iOS.xml;.xml"
+          },
+          "lib/Xamarin.iOS10/SvgImageSource.iOS.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Soccer_App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.57.0",
           "Newtonsoft.Json": "13.0.1",
           "PCLStorage": "1.0.2",
           "Xam.FormsPlugin.IconEntry": "1.1.1",
+          "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.Svg": "1.0.3"
@@ -973,6 +1393,51 @@
     }
   },
   "libraries": {
+    "Google.Apis/1.57.0": {
+      "sha512": "30V7T2G98HQjfI6y0AzBOXJUu7j7Trl1ZzH0e6DKmUaXNCvdMPwxApjBKESeTOkWjMdFRmkpAGyDEoxim+Xq1A==",
+      "type": "package",
+      "path": "google.apis/1.57.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.57.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Core/1.57.0": {
+      "sha512": "5wuY88PewhfaWsk37EEHcwU6CFqxpaWMm20ogWLXmaCw8NbTlV/Lna0gjtr2jpTLgb3mtVa7RC1AG/mgi530SQ==",
+      "type": "package",
+      "path": "google.apis.core/1.57.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.57.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -1184,6 +1649,47 @@
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/IconEntry.FormsPlugin.Abstractions.xml",
         "xam.formsplugin.iconentry.1.1.1.nupkg.sha512",
         "xam.formsplugin.iconentry.nuspec"
+      ]
+    },
+    "Xamarin.CommunityToolkit/2.0.5": {
+      "sha512": "8oFY5ZrKoIOCqtTeRh+jx5TAcs177TU0pEoefMWRptrq+TZoKwsPNg7L8lBtLSP+2ymg4VBn8i/6chA6b4mGdQ==",
+      "type": "package",
+      "path": "xamarin.communitytoolkit/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/xct/cs/Xamarin.CommunityToolkit.SourceGenerator.dll",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.dll",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.xml",
+        "lib/net471/Xamarin.CommunityToolkit.dll",
+        "lib/net471/Xamarin.CommunityToolkit.xml",
+        "lib/net472/Xamarin.CommunityToolkit.dll",
+        "lib/net472/Xamarin.CommunityToolkit.xml",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.dll",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.xml",
+        "lib/tizen40/Xamarin.CommunityToolkit.dll",
+        "lib/tizen40/Xamarin.CommunityToolkit.xml",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.dll",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.pri",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.xml",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.xml",
+        "xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+        "xamarin.communitytoolkit.nuspec"
       ]
     },
     "Xamarin.Essentials/1.7.3": {
@@ -1477,10 +1983,12 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Google.Apis >= 1.57.0",
       "Newtonsoft.Json >= 13.0.1",
       "PCLStorage >= 1.0.2",
       "Soccer_App >= 1.0.0",
       "Xam.FormsPlugin.IconEntry >= 1.1.1",
+      "Xamarin.CommunityToolkit >= 2.0.5",
       "Xamarin.Essentials >= 1.7.3",
       "Xamarin.Forms >= 5.0.0.2515",
       "Xamarin.Forms.Svg >= 1.0.3"
@@ -1521,6 +2029,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Google.Apis": {
+            "target": "Package",
+            "version": "[1.57.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
@@ -1532,6 +2044,10 @@
           "Xam.FormsPlugin.IconEntry": {
             "target": "Package",
             "version": "[1.1.1, )"
+          },
+          "Xamarin.CommunityToolkit": {
+            "target": "Package",
+            "version": "[2.0.5, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

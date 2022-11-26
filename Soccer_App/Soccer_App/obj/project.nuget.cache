@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HVp/5UMycPqIc+Txy38mINp+LfkXwbvI/0Cm0zODFMjTjcNAunEJxwkNsdlKgjvP1MOngJ9SsSlY+jZQfYYvKA==",
+  "dgSpecHash": "2G7Rq+dAFtNjXhcgooIE4n+MPqN6KOx4dFXEI7Cd1umHbaaXJnrQptXK2+QL6gP4QXvWfcu0zziyvJi3L8rNYw==",
   "success": true,
   "projectFilePath": "/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/Soccer_App.csproj",
   "expectedPackageFiles": [
+    "/Users/angelicavalencia/.nuget/packages/google.apis/1.57.0/google.apis.1.57.0.nupkg.sha512",
+    "/Users/angelicavalencia/.nuget/packages/google.apis.core/1.57.0/google.apis.core.1.57.0.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/microsoft.bcl/1.1.6/microsoft.bcl.1.1.6.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/microsoft.bcl.async/1.0.165/microsoft.bcl.async.1.0.165.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/microsoft.bcl.build/1.0.10/microsoft.bcl.build.1.0.10.nupkg.sha512",
@@ -14,7 +16,12 @@
     "/Users/angelicavalencia/.nuget/packages/skiasharp/1.60.0/skiasharp.1.60.0.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/skiasharp.svg/1.60.0/skiasharp.svg.1.60.0.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/angelicavalencia/.nuget/packages/system.reflection.emit.ilgeneration/4.7.0/system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+    "/Users/angelicavalencia/.nuget/packages/system.reflection.emit.lightweight/4.7.0/system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "/Users/angelicavalencia/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.3/system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "/Users/angelicavalencia/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/xam.formsplugin.iconentry/1.1.1/xam.formsplugin.iconentry.1.1.1.nupkg.sha512",
+    "/Users/angelicavalencia/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/xamarin.forms/5.0.0.2515/xamarin.forms.5.0.0.2515.nupkg.sha512",
     "/Users/angelicavalencia/.nuget/packages/xamarin.forms.svg/1.0.3/xamarin.forms.svg.1.0.3.nupkg.sha512"

@@ -2,17 +2,29 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Soccer_App.View.LeaguesPage">
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:Class="Soccer_App.View.LeaguesPage"
+    Title="Leagues"
+    IconImageSource="hamburger.png"
+    NavigationPage.IconColor="#ffffff"
+    >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:EventToCommandBehavior x:Key="TextChangedEventArgsConverter"/>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
     <ContentPage.Content>
+
+        
 
         <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.2*"/>
             <RowDefinition Height="2.5*"/>
             <RowDefinition Height="2.5*"/>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="6*"/>
-            <RowDefinition Height="1.2*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -22,8 +34,8 @@
 
         </Grid.ColumnDefinitions>
 
+           
         <StackLayout Orientation="Horizontal"
-                     Grid.Row="1"
                      Grid.Column="0"
                      Grid.ColumnSpan="3"
                      Margin="20"
@@ -78,7 +90,7 @@
         </StackLayout>
 
         <StackLayout Orientation="Horizontal"
-                     Grid.Row="2"
+                     Grid.Row="1"
                      Grid.Column="0"
                      Grid.ColumnSpan="3"
                      Margin="20"
@@ -134,18 +146,19 @@
 
         </StackLayout>
 
-        <StackLayout Grid.Row="3"
+        <StackLayout Grid.Row="2"
                      Orientation="Horizontal"
                      Grid.ColumnSpan="3"
                      Spacing="20"
                      VerticalOptions="Center"
-                     HorizontalOptions="Center">
+                     HorizontalOptions="Center"
+                     >
             <Frame CornerRadius="15"
                    Padding="0"
                    IsClippedToBounds="True"
                    BorderColor="Transparent"
                    HasShadow="False"
-                   Background="#85929E"
+                   BackgroundColor="#85929E"
                    Opacity="0.33"
                    >
 
@@ -158,12 +171,24 @@
                            Margin="10,0,0,0"/>
                     <Entry x:Name="entrySearch"
                        Placeholder="Search"
-                       TextColor="#FFFDFD"
                        PlaceholderColor="#FFFDFD"
-                       FontSize="25"
+                       FontSize="20"
+                       TextColor="White"
                        FontAttributes="None"
-                       WidthRequest="290"/>
+                       WidthRequest="290"
+                       BackgroundColor="#85929E"
+                       TextTransform="None"
+                        >
+                       <Entry.Behaviors>
+                           <xct:EventToCommandBehavior
+                               EventName="TextChanged"
+                               Command="{Binding SearchCommand}"
+                               EventArgsConverter="{StaticResource TextChangedEventArgsConverter}"/>
 
+                       </Entry.Behaviors>
+
+                    </Entry>
+                    
                 </StackLayout>
 
             </Frame>
@@ -174,14 +199,16 @@
 
         </StackLayout>
 
-        <StackLayout Grid.Row="4"
+        <StackLayout Grid.Row="3"
                      Grid.ColumnSpan="3"
-                     Margin="20,0"
+                     Margin="20,0,20,20"
                      HorizontalOptions="Center"
                      >
-        <CollectionView  Margin="5,20,0,0"
+        <CollectionView  x:Name="collectionLeagues"
+                         Margin="5,20,0,0"
                          HorizontalOptions="Center"
-                         ItemsSource="{Binding LeaguesList}">
+                         ItemsSource="{Binding LeaguesList2}"
+                         EmptyView="There are no leagues to display">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical"
                              VerticalItemSpacing="30"
@@ -199,19 +226,20 @@
                            Padding="5"
                            IsClippedToBounds="True"
                            HasShadow="False">
-                        <Image Source="{Binding league.logo}" VerticalOptions="Start"/>
+                        <Image Source="{Binding logo}" VerticalOptions="Start"/>
 
                     </Frame>
                     <StackLayout WidthRequest="150">
 
-                        <Label Text="{Binding league.name}"
+                        <Label Text="{Binding name_translations.en}"
                                FontSize="13"
                                FontAttributes="Bold"/>
 
                         <StackLayout Orientation="Horizontal"
                                      WidthRequest="100"
                                      VerticalOptions="Fill"
-                                     HorizontalOptions="Start">
+                                     HorizontalOptions="Start"
+                                     >
                             <!--<Frame CornerRadius="30"
                                    Padding="0"
                                    IsClippedToBounds="True"
@@ -227,7 +255,7 @@
                             </Frame>-->
 
                             
-                            <Label Text="{Binding country.name}"
+                            <Label Text="{Binding country}"
                                    FontSize="13"/>
 
                         </StackLayout>
@@ -257,5 +285,6 @@
 
     </Grid>
     </ContentPage.Content>
+        
 </ContentPage>
 

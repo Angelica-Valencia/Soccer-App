@@ -36,6 +36,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -47,6 +51,10 @@
             "Xam.FormsPlugin.IconEntry": {
               "target": "Package",
               "version": "[1.1.1, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -109,6 +117,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -126,6 +138,10 @@
             "Xam.FormsPlugin.IconEntry": {
               "target": "Package",
               "version": "[1.1.1, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -150,7 +166,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/Users/angelicavalencia/Library/Caches/VisualStudio/17.0/MSBuild/974_3/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/angelicavalencia/Library/Caches/VisualStudio/17.0/MSBuild/14455_3/RuntimeIdentifierGraph.json"
         }
       }
     }

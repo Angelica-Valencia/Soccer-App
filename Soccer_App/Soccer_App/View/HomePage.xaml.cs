@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Soccer_App.ViewModel;
 using Xamarin.Forms;
 
 namespace Soccer_App.View
@@ -9,6 +10,9 @@ namespace Soccer_App.View
         public HomePage()
         {
             InitializeComponent();
+            this.BindingContext = new VM_Home(Navigation);
+            this.BindingContext = new VM_LeaguesList(Navigation);
+
         }
     }
 }

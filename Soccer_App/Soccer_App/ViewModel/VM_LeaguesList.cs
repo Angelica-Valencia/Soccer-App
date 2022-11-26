@@ -7,6 +7,8 @@ using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using Soccer_App.Model;
 using Soccer_App.Service;
+using Xamarin.CommunityToolkit;
+using System.Linq;
 
 namespace Soccer_App.ViewModel
 {
@@ -14,9 +16,10 @@ namespace Soccer_App.ViewModel
   
     {
         #region: VARIABLES
-        string _Texto;
         IList<Response> _leaguesList;
-        IList<FlyoutItemPage_Model> _myflymenu;
+        IList<Response> _leaguesBackUp;
+        IList<Datum> _leaguesList2;
+        IList<Datum> _leaguesBackUp2;
         #endregion
 
         #region: CONSTRUCTORS
@@ -24,26 +27,15 @@ namespace Soccer_App.ViewModel
         {
             Navigation = navigation;
             Task.Run(DisplayLeagues);
-            GetMenuItems();
+            SearchCommand = new Command<TextChangedEventArgs>(Search);
+
+
         }
         #endregion
 
         #region: Properties
 
-        public IList<FlyoutItemPage_Model> MyFlyOutMenu
-        {
-            get
-            {
-                if (_myflymenu == null)
-                    _myflymenu = new ObservableCollection<FlyoutItemPage_Model>();
-                return _myflymenu;
-            }
-            set
-            {
-                SetValue(ref _myflymenu, value);
-                OnPropertyChanged();
-            }
-        }
+        public Command<TextChangedEventArgs> SearchCommand { get; }
 
         public IList<Response> LeaguesList
         {
@@ -58,75 +50,137 @@ namespace Soccer_App.ViewModel
                 OnPropertyChanged();
             }
         }
-        public string Texto
+
+        public IList<Response> LeaguesBackUp
         {
-            get { return _Texto; }
-            set { SetValue(ref _Texto, value); }
+            get
+            {
+                if (_leaguesBackUp == null)
+                    _leaguesBackUp = new ObservableCollection<Response>();
+                return _leaguesBackUp;
+            }
+            set
+            {
+                SetValue(ref _leaguesBackUp, value);
+                OnPropertyChanged();
+            }
         }
+        public IList<Datum> LeaguesList2
+        {
+            get
+            {
+                if (_leaguesList2 == null)
+                    _leaguesList2 = new ObservableCollection<Datum>();
+                return _leaguesList2;
+            }
+            set
+            {
+                SetValue(ref _leaguesList2, value);
+                OnPropertyChanged();
+            }
+        }
+
+        public IList<Datum> LeaguesBackUp2
+        {
+            get
+            {
+                if (_leaguesBackUp2 == null)
+                    _leaguesBackUp2 = new ObservableCollection<Datum>();
+                return _leaguesBackUp2;
+            }
+            set
+            {
+                SetValue(ref _leaguesBackUp2, value);
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region: PROCESSES
-
-        public void  GetMenuItems()
-        {
-            FlyoutItemPage_Model home = new FlyoutItemPage_Model();
-            FlyoutItemPage_Model leagues = new FlyoutItemPage_Model();
-            FlyoutItemPage_Model live = new FlyoutItemPage_Model();
-            FlyoutItemPage_Model settings = new FlyoutItemPage_Model();
-
-            home.Title = "Home";
-            home.IconSource = "home.png";
-            MyFlyOutMenu.Add(home);
-            leagues.Title = "Leagues";
-            leagues.IconSource = "leagues.png";
-            MyFlyOutMenu.Add(leagues);
-            live.Title = "Live";
-            live.IconSource = "live.png";
-            MyFlyOutMenu.Add(live);
-            settings.Title = "Settings";
-            settings.IconSource = "settings.png";
-            MyFlyOutMenu.Add(settings);
-
-            FlyoutItemPage_Model[] myMenu = { home, leagues, live, settings };
-
-        }
 
         public async Task DisplayLeagues()
         {
             try
             {
-                var league = await API_Helper.GetLeagues();
+                var league2 = await API_Helper2.GetMedia();
 
+                //var league = await API_Helper.GetLeagues();
                 
-                for(int i = 0; i < league.response.Length; i++)
-                {
-                    if (league.response[i].country.name == "World")
+                for(int i = 0; i < league2.Count; i++)
+                { 
+
+                    if (league2[i].country is null && (league2[i].facts[0].name == "Division level" && league2[i].facts[0].value == "1"))
                     {
-                        if (league.response[i].seasons[0].coverage.standings != true
-                            || ((league.response[i].seasons[0].coverage.fixtures.events != true) || (league.response[i].seasons[0].coverage.fixtures.lineups != true)))
+                        List<string> split_string = league2[i].slug.Split('-').ToList();
+
+                        string new_name;
+
+                        for (int index = 0; index < split_string.Count; index++)
                         {
-                            continue;
+                            new_name = split_string[index][0].ToString().ToUpper() + split_string[index].Substring(1);
+
+                            if (league2[i].name_translations.en.Contains(','))
+                            {
+                                league2[i].name_translations.en = league2[i].name_translations.en.Split(',')[0] + league2[i].name_translations.en.Split(',')[1];
+                            }
+                            
+
+                            if (league2[i].name_translations.en.Contains(new_name) is false)
+                            {
+                                league2[i].country = string.Concat(new_name);
+                            }
+                            else
+                            {
+                                continue;   
+                            }
+
                         }
-                        else
-                        {
-                            LeaguesList.Add(league.response[i]);
-                        }
+                    }
+                    if (league2[i].country is null || league2[i].name_translations.en.ToUpper().Contains("FRIENDLY") || league2[i].slug.ToUpper().Contains("U1") || league2[i].slug.ToUpper().Contains("U2"))
+                    {
+                        continue;
                     }
                     else
                     {
-                        if (league.response[i].seasons[0].coverage.players != true || league.response[i].seasons[0].coverage.standings != true
-                            || ((league.response[i].seasons[0].coverage.fixtures.events != true) || (league.response[i].seasons[0].coverage.fixtures.lineups != true)))
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            LeaguesList.Add(league.response[i]);
-                        }
+                        LeaguesList2.Add(league2[i]);
+                        LeaguesBackUp2.Add(league2[i]);
                     }
                     
-                    
                 }
+                
+                //for(int i = 0; i < league.response.Length; i++)
+                //{
+                //    if (league.response[i].country.name == "World")
+                //    {
+                //        if (league.response[i].seasons[0].coverage.standings != true
+                //            || ((league.response[i].seasons[0].coverage.fixtures.events != true) || (league.response[i].seasons[0].coverage.fixtures.lineups != true)))
+                //        {
+                //            continue;
+                //        }
+                //        else
+                //        {
+                //            LeaguesList.Add(league.response[i]);
+                //            LeaguesBackUp.Add(league.response[i]);
+                //        }
+                //    }
+                //    else
+                //    {
+                //        if (league.response[i].seasons[0].coverage.players != true || league.response[i].seasons[0].coverage.standings != true
+                //            || ((league.response[i].seasons[0].coverage.fixtures.events != true) || (league.response[i].seasons[0].coverage.fixtures.lineups != true)))
+                //        {
+                //            continue;
+                //        }
+                //        else
+                //        {
+                //            LeaguesList.Add(league.response[i]);
+                //            LeaguesBackUp.Add(league.response[i]);
+
+                //        }
+                //    }
+                    
+                    
+                //}
                 
             }
             catch(Exception e)
@@ -135,15 +189,18 @@ namespace Soccer_App.ViewModel
             }
             
         }
-        public void ProcesoSimple()
+        public void Search(TextChangedEventArgs text)
         {
+            string word = text.NewTextValue.ToLower();
+            LeaguesList2 = LeaguesBackUp2.Where(a => a.name_translations.en.ToLower().Contains(word) || a.country.ToLower().Contains(word)).ToList();
+
 
         }
         #endregion
 
         #region: COMMANDS
         //public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
-        public ICommand ProcesoSimpcommand => new Command(ProcesoSimple);
+        //public ICommand SearchCommand => new Command(Search(object text));
         #endregion
     }
 }
