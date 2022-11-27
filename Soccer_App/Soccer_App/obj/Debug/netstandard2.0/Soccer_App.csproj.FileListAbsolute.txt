@@ -36,15 +36,11 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/bin/Debug/netstandard2.0/Soccer_App.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/bin/Debug/netstandard2.0/ref/Soccer_App.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/bin/Debug/netstandard2.0/Soccer_App.pdb
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.csproj.AssemblyReference.cache
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/App.xaml.g.cs
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/FlyoutMenuPage.xaml.g.cs
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/HomePage.xaml.g.cs
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/LeaguesPage.xaml.g.cs
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/LivePage.xaml.g.cs
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/MyFlyout.xaml.g.cs
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/MyNavigationShell.xaml.g.cs
-/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/MyTabbedPage.xaml.g.cs
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/SettingsPage.xaml.g.cs
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.AssemblyInfoInputs.cache
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.AssemblyInfo.cs
@@ -53,3 +49,4 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/ref/Soccer_App.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.pdb
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.csproj.AssemblyReference.cache

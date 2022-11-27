@@ -103,7 +103,7 @@ namespace Soccer_App.ViewModel
         {
             try
             {
-                var league2 = await API_Helper2.GetMedia();
+                var league2 = await API_Helper_Leagues.GetMedia();
 
                 //var league = await API_Helper.GetLeagues();
                 

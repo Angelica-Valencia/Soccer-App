@@ -6,24 +6,34 @@
     x:Class="Soccer_App.View.HomePage"
     Title="Home">
    
-    <StackLayout>
+    <ScrollView>
         
-        <StackLayout HeightRequest="100" IsClippedToBounds="True">
-            <Label x:Name="mylabel" FontSize=" 20" TextColor="Black" Text=""/>
-
-        </StackLayout>
-        <StackLayout HeightRequest="300"  Padding="10">
-            <xct:MediaElement x:Name="mymedia"
+        <StackLayout HeightRequest="300"
+                     Padding="20">
+            <StackLayout xct:CornerRadiusEffect.CornerRadius="20" Spacing="0">
+                <xct:MediaElement x:Name="mymedia"
                               ShowsPlaybackControls="True"
-                              Aspect="AspectFit"
+                              Aspect="AspectFill"
                               HeightRequest="200"
                               Source="{Binding YoutubeURL}"
-                              IsLooping="True"/>
+                              IsLooping="True"
+                              />
+                <Label Background="#EDEDEA"
+                       HeightRequest="60"
+                       Text="{Binding VideoTitle}"
+                       Padding="10"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       />
+
+            </StackLayout>
+            
             
         </StackLayout>
         
 
-    </StackLayout>
+    </ScrollView>
     
     
 

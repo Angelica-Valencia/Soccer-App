@@ -22,6 +22,7 @@ namespace Soccer_App.ViewModel
         IList<Datum> _mediaList;
         IList<Datum> _mediaBackUp;
         string youtubeURL;
+        string videoTitle;
         #endregion
 
         #region: CONSTRUCTORS
@@ -35,9 +36,9 @@ namespace Soccer_App.ViewModel
         #endregion
 
 
-    #region: Properties
+        #region: Properties
 
-    public string YoutubeURL
+        public string YoutubeURL
         {
             get
             {   
@@ -49,16 +50,32 @@ namespace Soccer_App.ViewModel
             }
                 
          }
+        public string VideoTitle
+        {
+            get
+            {
+                return videoTitle;
+            }
+            set
+            {
+                SetValue(ref videoTitle, value);
+            }
+
+        }
 
 
         #endregion
 
         #region: PROCESSES
 
+
         public async Task DisplayMedia()
         {
+            var media = await API_Helper_Home.GetMediaVideo();
+            string videoURL = media[0].url;
+            VideoTitle = media[0].title.en;
             var youtube = new YoutubeClient();
-            var streamManifest = await youtube.Videos.Streams.GetManifestAsync("https://www.youtube.com/watch?v=PLZo8rCYfuY&ab_channel=LaLigaSantander");
+            var streamManifest = await youtube.Videos.Streams.GetManifestAsync(videoURL);
             var streamInfo = streamManifest.GetMuxedStreams().GetWithHighestVideoQuality();
 
             if (streamInfo != null)
