@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 namespace Soccer_App.ViewModel
 {
-    internal class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
         public INavigation Navigation;
 

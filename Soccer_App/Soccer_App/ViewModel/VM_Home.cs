@@ -12,11 +12,11 @@ using System.Linq;
 using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
 using Xamarin.CommunityToolkit.Core;
-
+using System.ComponentModel;
 
 namespace Soccer_App.ViewModel
 {
-    internal class VM_Home: BaseViewModel
+    public class VM_Home: BaseViewModel
     {
         #region: VARIABLES
         IList<Datum> _mediaList;
@@ -34,51 +34,22 @@ namespace Soccer_App.ViewModel
         }
         #endregion
 
-        #region: Properties
 
-        public string YoutubeURL
+    #region: Properties
+
+    public string YoutubeURL
         {
             get
-            {
+            {   
                 return youtubeURL;
             }
             set
             {
                 SetValue(ref youtubeURL, value);
-                OnPropertyChanged();
             }
-        }
+                
+         }
 
-
-        public IList<Datum> MediaList
-        {
-            get
-            {
-                if (_mediaList == null)
-                    _mediaList = new ObservableCollection<Datum>();
-                return _mediaList;
-            }
-            set
-            {
-                SetValue(ref _mediaList, value);
-                OnPropertyChanged();
-            }
-        }
-
-        public IList<Datum> MediaBackUp
-        {
-            get
-            {
-                if (_mediaBackUp == null)
-                    _mediaBackUp = new ObservableCollection<Datum>();
-                return _mediaBackUp;
-            }
-            set
-            {
-                SetValue(ref _mediaBackUp, value);
-                OnPropertyChanged();
-            }
-        }
 
         #endregion
 
@@ -95,7 +66,7 @@ namespace Soccer_App.ViewModel
                 // Get the actual stream
                 var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
                 var source = streamInfo.Url;
-                youtubeURL = source.Replace("&","&amp;");
+                YoutubeURL = source;
 
             }
 

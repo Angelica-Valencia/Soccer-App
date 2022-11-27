@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{4C0E9766-CDB9-466E-914F-C815C2C6F49D}|Default">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/View/HomePage.xaml">
     <Files>
       <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" Line="258" Column="51" />
       <File FileName="Soccer_App/Soccer_App/Service/API-Helper2.cs" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" Line="39" Column="33" />
-      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" Line="68" Column="41" />
-      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml.cs" Line="16" Column="2" />
-      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml" Line="13" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" Line="52" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" Line="1" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml.cs" Line="17" Column="10" />
+      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml" Line="1" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/BaseViewModel.cs" Line="67" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -40,14 +42,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Soccer__App.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8FC422F7-01CB-48C3-A01A-0B9055E1EF7A" />
 </Properties>
