@@ -22,7 +22,7 @@ namespace Soccer_App.Model
 
     public class Datum
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public int sport_id { get; set; }
         public int section_id { get; set; }
         public string slug { get; set; }

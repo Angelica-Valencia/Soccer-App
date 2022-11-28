@@ -18,14 +18,69 @@
                               Source="{Binding YoutubeURL}"
                               IsLooping="True"
                               />
-                <Label Background="#EDEDEA"
-                       HeightRequest="60"
-                       Text="{Binding VideoTitle}"
-                       Padding="10"
-                       TextColor="Black"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
+                <StackLayout Background="#EDEDEA"
+                             HeightRequest="60"
+                             Padding="10"
+                             Spacing="0"
+                             VerticalOptions="Center"
+                             >
+                    <Label Background="#EDEDEA"
+                           Text="{Binding VideoSubTitle}"
+                           TextColor="#FDCB04"
+                           FontAttributes="Bold"
+                           TextDecorations="Underline"
+                           HorizontalTextAlignment="Center"
                        />
+                    <Label Background="#EDEDEA"
+                           Text="{Binding VideoTitle}"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           Margin="0, 10, 0, 0"
+                       />
+
+
+                </StackLayout>
+            </StackLayout>
+                
+            <StackLayout Margin="0,20,0,0"
+                         xct:CornerRadiusEffect.CornerRadius="20"
+                         HeightRequest="120"
+                         Padding="10"
+                         Background="#EDEDEA"
+                         >
+                <Label Text="Leagues"
+                       FontAttributes="Bold"
+                       TextDecorations="Underline"/>
+            <CollectionView  x:Name="collectionLeagues"
+                             Margin="0,10,0,0"
+                             ItemsSource="{Binding LeaguesListSeason}"
+                             EmptyView="Loading...">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Horizontal"
+                                 VerticalItemSpacing="0"
+                                 HorizontalItemSpacing="40"
+                                 Span="1"
+                                 />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="{Binding logo}"/>
+                        <Label Text="{Binding name_translations.en}"/>
+
+                    </StackLayout>
+                    
+                    
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+    
+                
 
             </StackLayout>
             

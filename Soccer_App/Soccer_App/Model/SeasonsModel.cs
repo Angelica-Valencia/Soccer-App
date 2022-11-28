@@ -11,7 +11,7 @@ namespace Soccer_App.Model
         public string name { get; set; }
         public int? year_start { get; set; }
         public int? year_end { get; set; }
-        public League[] league { get; set; }
+        public LeagueSeason[] league { get; set; }
     }
 
     public class LeagueSeason

@@ -149,38 +149,7 @@ namespace Soccer_App.ViewModel
                     
                 }
                 
-                //for(int i = 0; i < league.response.Length; i++)
-                //{
-                //    if (league.response[i].country.name == "World")
-                //    {
-                //        if (league.response[i].seasons[0].coverage.standings != true
-                //            || ((league.response[i].seasons[0].coverage.fixtures.events != true) || (league.response[i].seasons[0].coverage.fixtures.lineups != true)))
-                //        {
-                //            continue;
-                //        }
-                //        else
-                //        {
-                //            LeaguesList.Add(league.response[i]);
-                //            LeaguesBackUp.Add(league.response[i]);
-                //        }
-                //    }
-                //    else
-                //    {
-                //        if (league.response[i].seasons[0].coverage.players != true || league.response[i].seasons[0].coverage.standings != true
-                //            || ((league.response[i].seasons[0].coverage.fixtures.events != true) || (league.response[i].seasons[0].coverage.fixtures.lineups != true)))
-                //        {
-                //            continue;
-                //        }
-                //        else
-                //        {
-                //            LeaguesList.Add(league.response[i]);
-                //            LeaguesBackUp.Add(league.response[i]);
-
-                //        }
-                //    }
-                    
-                    
-                //}
+            
                 
             }
             catch(Exception e)
