@@ -67,6 +67,9 @@ namespace Soccer_App.Model
         public HomeTeamEvent home_team { get; set; }
         public AwayTeamEvent away_team { get; set; }
         public string start_at { get; set; }
+        public string start_at_date { get; set; }
+        public string start_at_time { get; set; }
+        public string current_time { get; set; }
         public int? priority { get; set; }
         public HomeScoreEvent home_score { get; set; }
         public AwayScoreEvetn away_score { get; set; }
@@ -96,6 +99,7 @@ namespace Soccer_App.Model
         public SeasonEvent season { get; set; }
         public SectionEvent section { get; set; }
         public SportEvent sport { get; set; }
+        public DatumIncidents[] dataIncidents { get; set; }
     }
 
     public class HomeScoreEvent
@@ -195,7 +199,7 @@ namespace Soccer_App.Model
 
     public class RootEvent
     {
-        public DatumEvent[] data { get; set; }
+        public List<DatumEvent> data { get; set; }
         public MetaEvent meta { get; set; }
     }
 

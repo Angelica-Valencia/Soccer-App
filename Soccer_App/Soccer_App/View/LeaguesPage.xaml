@@ -240,19 +240,6 @@
                                      VerticalOptions="Fill"
                                      HorizontalOptions="Start"
                                      >
-                            <!--<Frame CornerRadius="30"
-                                   Padding="0"
-                                   IsClippedToBounds="True"
-                                   BorderColor="Transparent"
-                                   HasShadow="False"
-                                   WidthRequest="30">
-                                <Image >
-                                <Image.Source>
-                                    <svg:SvgImageSource Source="{Binding country.flag}"/>
-                                </Image.Source>
-                            </Image>
-
-                            </Frame>-->
 
                             
                             <Label Text="{Binding country}"

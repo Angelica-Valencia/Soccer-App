@@ -2,12 +2,116 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="Soccer_App.View.LivePage"
     Title="Live">
     <ContentPage.Content>
-        <Label Text="This is the Live Page"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"/>
+        <StackLayout Margin="0,40,0,0"
+                         xct:CornerRadiusEffect.CornerRadius="20"
+                         HeightRequest="120"
+                         Padding="10"
+                         >
+            <CollectionView  x:Name="collectionLeagues"
+                             Margin="10,10,10,0"
+                             ItemsSource="{Binding EventList}"
+                             HorizontalOptions="CenterAndExpand"
+                             EmptyView="Loading...">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 VerticalItemSpacing="20"
+                                 HorizontalItemSpacing="40"
+                                 Span="1"
+                                 />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="#F5F5F5"
+                                 HeightRequest="200"
+                                 xct:CornerRadiusEffect.CornerRadius="20"
+                                 Padding="20"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="CenterAndExpand"
+                                 >
+                        <StackLayout x:Name="home_team"
+                                     VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                     Margin="5,0,5,0"
+                                     WidthRequest="100">
+                            <Image Source="{Binding home_team.logo}"
+                                   VerticalOptions="Center"/>
+                            <Label Text="{Binding home_team.name_short}"
+                                   HorizontalTextAlignment="Center"/>
+
+                        </StackLayout>
+                        <StackLayout x:Name="info"
+                                     VerticalOptions="CenterAndExpand"
+                                     HorizontalOptions="Center"
+                                     Spacing="20">
+                            <StackLayout x:Name="league_name"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Center">
+                                <Label Text="{Binding league.name}"
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                            </StackLayout>
+                            <StackLayout x:Name="score"
+                                         Orientation="Horizontal"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                                <Label x:Name="score_home"
+                                       Text="{Binding home_score.current}"
+                                       VerticalTextAlignment="Center"
+                                       />
+                                <Label Text=":"
+                                       FontAttributes="Bold"
+                                       FontSize="30"
+                                       VerticalTextAlignment="Center"/>
+                                <Label x:Name="away_score"
+                                       Text="{Binding away_score.current}"
+                                       VerticalTextAlignment="Center"/>
+
+                            </StackLayout>
+                            <StackLayout x:Name="time"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Center">
+                                <Label Text="{Binding current_time}"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="{Binding status_more}"
+                                       HorizontalOptions="Center"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                        <StackLayout x:Name="away_team"
+                                     VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                     Margin="5,0,5,0"
+                                     WidthRequest="90"
+                                     >
+                            <Image Source="{Binding away_team.logo}"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="{Binding away_team.name_short}"
+                                   HorizontalTextAlignment="Center"/>
+
+                        </StackLayout>
+                        
+
+                    </StackLayout>
+                    
+                    
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+    
+                
+
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 

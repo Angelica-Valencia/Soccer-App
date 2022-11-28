@@ -26,6 +26,7 @@ namespace Soccer_App.ViewModel
         string videoTitle;
         string videoSubTitle;
         IList<Datum> _leaguesListSeason;
+        DatumEvent _eventSingle;
         #endregion
 
         #region: CONSTRUCTORS
@@ -34,6 +35,7 @@ namespace Soccer_App.ViewModel
             Navigation = navigation;
             Task.Run(DisplayMedia);
             Task.Run(GetLeaguesHome);
+            Task.Run(GetLiveSingleEvent);
 
 
         }
@@ -90,6 +92,18 @@ namespace Soccer_App.ViewModel
             {
                 SetValue(ref _leaguesListSeason, value);
                 OnPropertyChanged();
+            }
+        }
+
+        public DatumEvent EventSingle
+        {
+            get
+            { 
+                return _eventSingle;
+            }
+            set
+            {
+                SetValue(ref _eventSingle, value);
             }
         }
 
@@ -159,12 +173,81 @@ namespace Soccer_App.ViewModel
             
 
         }
-        #endregion
 
-        #region: COMMANDS
-        //public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
-        //public ICommand SearchCommand => new Command(Search(object text));
-        #endregion
+        public async Task GetLiveSingleEvent()
+        {
+            DateTime currentTime = DateTime.Now.ToUniversalTime();
+
+            int year = currentTime.Year;
+            int month = currentTime.Month;
+            int day = currentTime.Day;
+
+            string fullTime;
+            int hour;
+            int min;
+            int sec;
+
+            DateTime now = DateTime.Now.ToUniversalTime();
+            string current;
+
+            var eventsInfo = await API_Helper_Live.GetIncidentsLive();
+
+
+
+            for (int i = 0; i < eventsInfo.Count; i++)
+            {
+
+                fullTime = eventsInfo[i].start_at.Split(' ')[1];
+                hour = Int32.Parse(fullTime.Split(':')[0]);
+                min = Int32.Parse(fullTime.Split(':')[1]);
+                sec = Int32.Parse(fullTime.Split(':')[2]);
+
+                DateTime game_time_start = new DateTime(DateTime.Now.Year,
+                                           DateTime.Now.Month,
+                                           DateTime.Now.Day, hour, min, sec);
+
+                if (eventsInfo[i].status_more == "1st half")
+                {
+                    current = (now - game_time_start).ToString();
+                    current = current.Split(':')[1];
+                    eventsInfo[i].current_time = current;
+                }
+                else if (eventsInfo[i].status_more == "2nd half")
+                {
+                    foreach (DatumIncidents item in eventsInfo[i].dataIncidents)
+                    {
+                        if (item.incident_type == "injuryTime")
+                        {
+                            game_time_start = new DateTime(DateTime.Now.Year,
+                                           DateTime.Now.Month,
+                                           DateTime.Now.Day, hour, min + item.length ?? default(int) + 15, sec);
+                            current = (now - game_time_start).ToString();
+                            current = current.Split(':')[1];
+                            eventsInfo[i].current_time = current;
+                        }
+                    }
+
+
+                }
+                else
+                {
+                    current = "";
+                    eventsInfo[i].current_time = current;
+                }
+
+                eventsInfo.OrderBy(a => a.section.priority);
+
+                EventSingle = eventsInfo[0];
+
+            }
+        }
+
+            #endregion
+
+            #region: COMMANDS
+            //public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
+            //public ICommand SearchCommand => new Command(Search(object text));
+            #endregion
 
     }
 }

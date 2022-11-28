@@ -9,7 +9,8 @@
     <ScrollView>
         
         <StackLayout HeightRequest="300"
-                     Padding="20">
+                     Padding="20"
+                     Margin="0, 30, 0 ,0">
             <StackLayout xct:CornerRadiusEffect.CornerRadius="20" Spacing="0">
                 <xct:MediaElement x:Name="mymedia"
                               ShowsPlaybackControls="True"
@@ -18,21 +19,19 @@
                               Source="{Binding YoutubeURL}"
                               IsLooping="True"
                               />
-                <StackLayout Background="#EDEDEA"
+                <StackLayout Background="#F5F5F5"
                              HeightRequest="60"
                              Padding="10"
                              Spacing="0"
                              VerticalOptions="Center"
                              >
-                    <Label Background="#EDEDEA"
-                           Text="{Binding VideoSubTitle}"
+                    <Label Text="{Binding VideoSubTitle}"
                            TextColor="#FDCB04"
                            FontAttributes="Bold"
                            TextDecorations="Underline"
                            HorizontalTextAlignment="Center"
                        />
-                    <Label Background="#EDEDEA"
-                           Text="{Binding VideoTitle}"
+                    <Label Text="{Binding VideoTitle}"
                            TextColor="Black"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center"
@@ -47,7 +46,7 @@
                          xct:CornerRadiusEffect.CornerRadius="20"
                          HeightRequest="120"
                          Padding="10"
-                         Background="#EDEDEA"
+                         Background="#F5F5F5"
                          >
                 <Label Text="Leagues"
                        FontAttributes="Bold"
@@ -83,9 +82,86 @@
                 
 
             </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal"
+                         BackgroundColor="#F5F5F5"
+                         HeightRequest="150"
+                         xct:CornerRadiusEffect.CornerRadius="20"
+                         Padding="20"
+                         VerticalOptions="Center"
+                         Margin="0, 20, 0, 0"
+                                 >
+                        <StackLayout x:Name="home_team"
+                                     VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                     Margin="5,0,5,0"
+                                     WidthRequest="100">
+                            <Image Source="{Binding EventSingle.home_team.logo}"
+                                   VerticalOptions="Center"/>
+                            <Label Text="{Binding EventSingle.home_team.name_short}"
+                                   HorizontalTextAlignment="Center"/>
+
+                        </StackLayout>
+                        <StackLayout x:Name="info"
+                                     VerticalOptions="CenterAndExpand"
+                                     HorizontalOptions="Center"
+                                     Spacing="20">
+                            <StackLayout x:Name="league_name"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Center">
+                                <Label Text="{Binding EventSingle.league.name}"
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                            </StackLayout>
+                            <StackLayout x:Name="score"
+                                         Orientation="Horizontal"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                                <Label x:Name="score_home"
+                                       Text="{Binding EventSingle.home_score.current}"
+                                       VerticalTextAlignment="Center"
+                                       />
+                                <Label Text=":"
+                                       FontAttributes="Bold"
+                                       FontSize="30"
+                                       VerticalTextAlignment="Center"/>
+                                <Label x:Name="away_score"
+                                       Text="{Binding EventSingle.away_score.current}"
+                                       VerticalTextAlignment="Center"/>
+
+                            </StackLayout>
+                            <StackLayout x:Name="time"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Center">
+                                <Label Text="{Binding EventSingle.current_time}"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="{Binding EventSingle.status_more}"
+                                       HorizontalOptions="Center"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                        <StackLayout x:Name="away_team"
+                                     VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                     Margin="5,0,5,0"
+                                     WidthRequest="100">
+                            <Image Source="{Binding EventSingle.away_team.logo}"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="{Binding EventSingle.away_team.name_short}"
+                                   HorizontalTextAlignment="Center"/>
+
+                        </StackLayout>
+                        
+
+                    </StackLayout>
             
             
         </StackLayout>
+
+
         
 
     </ScrollView>
