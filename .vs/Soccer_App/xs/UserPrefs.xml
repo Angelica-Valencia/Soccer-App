@@ -2,35 +2,34 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
-      <Breakpoint file="/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/Service/API_Helper_Live.cs" relfile="Soccer_App/Soccer_App/Service/API_Helper_Live.cs" line="90" column="1" />
+      <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.ItemProperties.Soccer__App.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8FC422F7-01CB-48C3-A01A-0B9055E1EF7A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/View/LivePage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/View/HomePage.xaml">
     <Files>
-      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" Line="225" Column="21" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" />
+      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" Line="242" Column="39" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" Line="38" Column="42" />
+      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" Line="1" Column="1" />
       <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml" />
+      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml" Line="90" Column="66" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/BaseViewModel.cs" />
       <File FileName="Soccer_App/Soccer_App/View/MyNavigationShell.xaml" />
-      <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Home.cs" />
+      <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Home.cs" Line="114" Column="1" />
       <File FileName="Soccer_App/Soccer_App/Model/SeasonsModel.cs" />
       <File FileName="Soccer_App/Soccer_App/Model/LeguesModel2.cs" />
-      <File FileName="Soccer_App/Soccer_App/Model/EventsModel.cs" Line="126" Column="33" />
-      <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Leagues.cs" />
+      <File FileName="Soccer_App/Soccer_App/Model/EventsModel.cs" Line="202" Column="32" />
+      <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Leagues.cs" Line="54" Column="1" />
       <File FileName="Soccer_App/Soccer_App/Model/MediaModel.cs" />
       <File FileName="Soccer_App/Soccer_App/Model/LeaguesModel.cs" />
       <File FileName="Soccer_App/Soccer_App.iOS/Main.cs" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Live.cs" Line="81" Column="64" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Live.cs" Line="121" Column="52" />
       <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Live.cs" Line="90" Column="1" />
-      <File FileName="Soccer_App/Soccer_App/View/LivePage.xaml" Line="28" Column="53" />
+      <File FileName="Soccer_App/Soccer_App/View/LivePage.xaml" Line="13" Column="27" />
       <File FileName="Soccer_App/Soccer_App/View/LivePage.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/Model/IncidenteModel.cs" Line="60" Column="31" />
     </Files>
@@ -45,7 +44,7 @@
               <Node name="View" expanded="True">
                 <Node name="HomePage.xaml" expanded="True" />
                 <Node name="LeaguesPage.xaml" expanded="True" />
-                <Node name="LivePage.xaml" expanded="True" selected="True" />
+                <Node name="LivePage.xaml" expanded="True" />
                 <Node name="MyNavigationShell.xaml" expanded="True" />
                 <Node name="SettingsPage.xaml" expanded="True" />
               </Node>

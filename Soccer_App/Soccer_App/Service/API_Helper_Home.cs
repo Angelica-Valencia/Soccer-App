@@ -104,7 +104,8 @@ namespace Soccer_App.Service
             var events = await GetEventId();
             events = events.OrderBy(a => a.start_at).ToList();
             int lastEvent = events.Count;
-            return events[lastEvent - 1].id;
+            //return events[lastEvent - 1].id;
+            return events[0].id;
 
         }
 

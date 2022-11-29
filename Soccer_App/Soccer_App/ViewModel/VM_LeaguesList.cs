@@ -27,15 +27,12 @@ namespace Soccer_App.ViewModel
         {
             Navigation = navigation;
             Task.Run(DisplayLeagues);
-            SearchCommand = new Command<TextChangedEventArgs>(Search);
 
 
         }
         #endregion
 
         #region: Properties
-
-        public Command<TextChangedEventArgs> SearchCommand { get; }
 
         public IList<Response> LeaguesList
         {
@@ -165,11 +162,19 @@ namespace Soccer_App.ViewModel
 
 
         }
+
+        public async Task GoDetails(Datum league)
+        {
+            await Navigation.PushAsync(new View.LeagueDetails(league));
+        }
+
+       
+
         #endregion
 
         #region: COMMANDS
-        //public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
-        //public ICommand SearchCommand => new Command(Search(object text));
+        public ICommand GoDetailscommand => new Command<Datum>(async (l) => await GoDetails(l));
+        public ICommand SearchCommand => new Command<TextChangedEventArgs>(Search);
         #endregion
     }
 }

@@ -50,3 +50,4 @@
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/ref/Soccer_App.dll
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.pdb
 /Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/Soccer_App.csproj.AssemblyReference.cache
+/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/obj/Debug/netstandard2.0/View/LeagueDetails.xaml.g.cs

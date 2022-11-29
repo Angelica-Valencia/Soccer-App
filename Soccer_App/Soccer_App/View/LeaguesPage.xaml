@@ -227,6 +227,10 @@
                            IsClippedToBounds="True"
                            HasShadow="False">
                         <Image Source="{Binding logo}" VerticalOptions="Start"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.GoDetailscommand, Source={x:Reference collectionLeagues}}" CommandParameter="{Binding .}"/>
+
+                        </Frame.GestureRecognizers>
 
                     </Frame>
                     <StackLayout WidthRequest="150">

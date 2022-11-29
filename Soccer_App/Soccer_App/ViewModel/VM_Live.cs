@@ -132,6 +132,7 @@ namespace Soccer_App.ViewModel
         //public ICommand SearchCommand => new Command(Search(object text));
         #endregion
 
+        
     }
 }
 
