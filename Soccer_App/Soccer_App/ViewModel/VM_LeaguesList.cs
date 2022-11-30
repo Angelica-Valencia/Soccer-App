@@ -100,11 +100,12 @@ namespace Soccer_App.ViewModel
         {
             try
             {
+                //var league2 = await API_Helper_Leagues.GetMedia();
                 var league2 = await API_Helper_Leagues.GetMedia();
 
                 //var league = await API_Helper.GetLeagues();
-                
-                for(int i = 0; i < league2.Count; i++)
+
+                for (int i = 0; i < league2.Count; i++)
                 { 
 
                     if (league2[i].country is null && (league2[i].facts[0].name == "Division level" && league2[i].facts[0].value == "1"))

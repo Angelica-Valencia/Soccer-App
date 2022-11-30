@@ -10,13 +10,13 @@ namespace Soccer_App.View
         public MyNavigationShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute("LeaguesPages", typeof(LeaguesPage));
+            //Routing.RegisterRoute("LeaguesPages", typeof(LeaguesPage));
         }
 
-        public async Task navto()
-        {
-            await Shell.Current.GoToAsync("LeaguesPage");
-        }
+        //public async Task navto()
+        //{
+        //    await Shell.Current.GoToAsync("LeaguesPage");
+        //}
     }
 }
 

@@ -14,10 +14,10 @@ namespace Soccer_App.View
             BindingContext = new VM_Live(Navigation);
         }
 
-        protected override async void OnAppearing()
-        {
-            await (BindingContext as VM_Live).GetLiveEvents();
-        }
+        //protected async override void OnAppearing()
+        //{
+        //    await (BindingContext as VM_Live).GetLiveEvents();
+        //}
     }
 }
 

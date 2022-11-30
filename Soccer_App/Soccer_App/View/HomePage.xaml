@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="Soccer_App.View.HomePage"
-    Title="Home">
+    Title="Home"
+    Style="{DynamicResource Key=PageStyle}">
    
     <ScrollView>
         
@@ -19,7 +20,7 @@
                               Source="{Binding YoutubeURL}"
                               IsLooping="True"
                               />
-                <StackLayout Background="#F5F5F5"
+                <StackLayout Style="{DynamicResource Key=StackPrimary}"
                              HeightRequest="60"
                              Padding="10"
                              Spacing="0"
@@ -32,7 +33,7 @@
                            HorizontalTextAlignment="Center"
                        />
                     <Label Text="{Binding VideoTitle}"
-                           TextColor="Black"
+                           Style="{DynamicResource Key=LabelPrimary}"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center"
                            Margin="0, 10, 0, 0"
@@ -46,11 +47,12 @@
                          xct:CornerRadiusEffect.CornerRadius="20"
                          HeightRequest="120"
                          Padding="10"
-                         Background="#F5F5F5"
+                         Style="{DynamicResource Key=StackPrimary}"
                          >
                 <Label Text="Leagues"
                        FontAttributes="Bold"
-                       TextDecorations="Underline"/>
+                       TextDecorations="Underline"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
             <CollectionView  x:Name="collectionLeagues"
                              Margin="0,10,0,0"
                              ItemsSource="{Binding LeaguesListSeason}"
@@ -66,7 +68,8 @@
                 <DataTemplate>
                     <StackLayout>
                         <Image Source="{Binding logo}"/>
-                        <Label Text="{Binding name_translations.en}"/>
+                        <Label Text="{Binding name_translations.en}"
+                               Style="{DynamicResource Key=LabelPrimary}"/>
 
                     </StackLayout>
                     
@@ -85,7 +88,7 @@
 
 
             <StackLayout Orientation="Horizontal"
-                         BackgroundColor="#F5F5F5"
+                         Style="{DynamicResource Key=StackPrimary}"
                          HeightRequest="150"
                          xct:CornerRadiusEffect.CornerRadius="20"
                          Padding="20"
@@ -100,7 +103,8 @@
                             <Image Source="{Binding EventSingle.home_team.logo}"
                                    VerticalOptions="Center"/>
                             <Label Text="{Binding EventSingle.home_team.name_short}"
-                                   HorizontalTextAlignment="Center"/>
+                                   HorizontalTextAlignment="Center"
+                                   Style="{DynamicResource Key=LabelPrimary}"/>
 
                         </StackLayout>
                         <StackLayout x:Name="info"
@@ -112,7 +116,8 @@
                                          HorizontalOptions="Center">
                                 <Label Text="{Binding EventSingle.league.name}"
                                        HorizontalOptions="Center"
-                                       HorizontalTextAlignment="Center"/>
+                                       HorizontalTextAlignment="Center"
+                                       Style="{DynamicResource Key=LabelPrimary}"/>
 
                             </StackLayout>
                             <StackLayout x:Name="score"
@@ -122,23 +127,28 @@
                                 <Label x:Name="score_home"
                                        Text="{Binding EventSingle.home_score.current}"
                                        VerticalTextAlignment="Center"
+                                       Style="{DynamicResource Key=LabelPrimary}"
                                        />
                                 <Label Text=":"
                                        FontAttributes="Bold"
                                        FontSize="30"
-                                       VerticalTextAlignment="Center"/>
+                                       VerticalTextAlignment="Center"
+                                       Style="{DynamicResource Key=LabelPrimary}"/>
                                 <Label x:Name="away_score"
                                        Text="{Binding EventSingle.away_score.current}"
-                                       VerticalTextAlignment="Center"/>
+                                       VerticalTextAlignment="Center"
+                                       Style="{DynamicResource Key=LabelPrimary}"/>
 
                             </StackLayout>
                             <StackLayout x:Name="time"
                                          VerticalOptions="Center"
                                          HorizontalOptions="Center">
                                 <Label Text="{Binding EventSingle.current_time}"
-                                       HorizontalOptions="Center"/>
+                                       HorizontalOptions="Center"
+                                       Style="{DynamicResource Key=LabelPrimary}"/>
                                 <Label Text="{Binding EventSingle.status_more}"
-                                       HorizontalOptions="Center"/>
+                                       HorizontalOptions="Center"
+                                       Style="{DynamicResource Key=LabelPrimary}"/>
 
                             </StackLayout>
 
@@ -151,7 +161,8 @@
                             <Image Source="{Binding EventSingle.away_team.logo}"
                                    HorizontalOptions="Center"/>
                             <Label Text="{Binding EventSingle.away_team.name_short}"
-                                   HorizontalTextAlignment="Center"/>
+                                   HorizontalTextAlignment="Center"
+                                   Style="{DynamicResource Key=LabelPrimary}"/>
 
                         </StackLayout>
                         

@@ -19,6 +19,12 @@ namespace Soccer_App.View
             BindingContext = new VM_Home(Navigation);
 
         }
+
+        //protected async override void OnAppearing()
+        //{
+        //    await (BindingContext as VM_Home).DisplayMedia();
+        //    await (BindingContext as VM_Home).GetLeaguesHome();
+        //}
     }
 }
 

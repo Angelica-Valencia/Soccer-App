@@ -44,7 +44,7 @@
 
         </Tab>
         
-        <Tab Title="Live"
+        <!--<Tab Title="Live"
              Icon="live.png">
             <ShellContent Title="Live"
                          Icon="live.png"
@@ -58,7 +58,7 @@
             <ShellContent Title="Settings"
                          Icon="setting-lines.png"
                          ContentTemplate ="{DataTemplate views:SettingsPage}" />
-        </Tab>
+        </Tab>-->
        
 
     </FlyoutItem>
@@ -74,7 +74,7 @@
 
         </Tab>
         
-        <Tab Title="Home"
+        <!--<Tab Title="Home"
              Icon="home.png">
             <ShellContent Title="Home"
                          Icon="home.png"
@@ -96,7 +96,7 @@
             <ShellContent Title="Settings"
                          Icon="setting-lines.png"
                          ContentTemplate ="{DataTemplate views:SettingsPage}" />
-        </Tab>
+        </Tab>-->
 
     </FlyoutItem>
     <FlyoutItem Title="Live"

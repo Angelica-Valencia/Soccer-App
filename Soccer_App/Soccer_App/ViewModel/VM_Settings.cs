@@ -14,6 +14,8 @@ using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
 using Xamarin.CommunityToolkit.Core;
 using System.ComponentModel;
+using Xamarin.Essentials;
+using Soccer_App.Themes;
 
 namespace Soccer_App.ViewModel
 {
@@ -22,6 +24,8 @@ namespace Soccer_App.ViewModel
         #region VARIABLES
         IList<Datum> _favLeagues;
         IList<Datum> _favLeaguesBackup;
+        IList<Datum> _leaguesUserSelection;
+        bool _wasToggled;
 
         #endregion
         #region CONSTRUCTOR
@@ -34,6 +38,18 @@ namespace Soccer_App.ViewModel
         #endregion
         #region PROPERTIES
         //public Command<TextChangedEventArgs> SearchFavCommand { get; }
+        public bool WasToggled
+        {
+            get
+            {
+                return _wasToggled;
+            }
+            set
+            {
+                SetValue(ref _wasToggled, value);
+            }
+        }
+
         public IList<Datum> FavLeagues
         {
             get
@@ -48,6 +64,9 @@ namespace Soccer_App.ViewModel
                 OnPropertyChanged();
             }
         }
+
+
+
         public IList<Datum> FavLeaguesBackUp
         {
             get
@@ -62,8 +81,34 @@ namespace Soccer_App.ViewModel
                 OnPropertyChanged();
             }
         }
+        public IList<Datum> LeaguesUserSelection
+        {
+            get
+            {
+                if (_leaguesUserSelection == null)
+                    _leaguesUserSelection = new ObservableCollection<Datum>();
+                return _leaguesUserSelection;
+            }
+            set
+            {
+                SetValue(ref _leaguesUserSelection, value);
+                OnPropertyChanged();
+            }
+        }
         #endregion
         #region PROCESSES
+
+        public List<int> ReturnLeaguesUser()
+        {
+            List<int> leaguesId = new List<int>();
+
+            foreach (Datum league in LeaguesUserSelection)
+            {
+                leaguesId.Add(league.id ?? default(int));
+            }
+            return leaguesId;
+        }
+
         public async Task GetAllLeagues()
         {
             var allLeagues = await API_Helper_Leagues.GetMedia();
@@ -117,10 +162,60 @@ namespace Soccer_App.ViewModel
 
 
         }
+
+        public async Task CreateFavList(Datum league)
+        {
+            if(LeaguesUserSelection.Count < 5)
+            {
+                LeaguesUserSelection.Add(league);
+            }
+            else
+            {
+                await DisplayAlert("Maximum Exceded", "You have reached the maximun of 5 leagues", "Ok");
+            }
+            
+        }
+
+        public async Task DeleteLeague(Datum leagueRemove)
+        {
+            var answer = await DisplayAlert("Maximum Exceded", $"Do you want to delete the league '{leagueRemove.name_translations.en}'?", "Yes","No");
+            if (answer)
+            {
+                LeaguesUserSelection.Remove(leagueRemove);
+            }
+        }
+
+        public async Task Save()
+        {
+            
+            await Navigation.PushAsync(new View.HomePage());
+            
+        }
+
+        //public void Toggled()
+        //{
+        //    //bool theme = switched.Value;
+        //    Application.Current.Resources.MergedDictionaries.Clear(); //Clear any theme data
+        //    if (WasToggled)
+        //    {
+        //        //dark mode
+        //        Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
+        //    }
+        //    else
+        //    {
+        //        //light mode
+        //        Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
+        //    }
+
+        //}
         #endregion
         #region COMMANDS
-        //public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
+        public ICommand CreateFavListCommand => new Command<Datum>(async (l) => await CreateFavList(l));
+        public ICommand DeleteLeagueCommand => new Command<Datum>(async (l) => await DeleteLeague(l));
         public ICommand SearchFavCommand => new Command<TextChangedEventArgs>(SearchFav);
+        //public ICommand ToggledCommand => new Command(Toggled);
+        public ICommand SaveCommand => new Command(async () => await Save());
+        //public ICommand CreateFavListCommand => new Command<Datum>(CreateFavList);
         #endregion
     }
 }

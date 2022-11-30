@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="Soccer_App.View.SettingsPage"
-    Title="Settings">
+    Title="Settings"
+    Style="{DynamicResource Key=PageStyle}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <xct:EventToCommandBehavior x:Key="TextChangedEventArgsConverter"/>
@@ -24,7 +25,8 @@
                   Margin="0, 20, 0, 0"
                      >
                   <Label Text="Leagues: "
-                         VerticalTextAlignment="Center"/>
+                         VerticalTextAlignment="Center"
+                         Style="{DynamicResource Key=LabelPrimary}"/>
             <Frame CornerRadius="15"
                    Padding="0"
                    IsClippedToBounds="True"
@@ -43,7 +45,7 @@
                            Margin="10,0,0,0"/>
                     <Entry x:Name="entrySearch"
                        Placeholder="Search"
-                       PlaceholderColor="#FFFDFD"
+                       PlaceholderColor="White"
                        FontSize="20"
                        TextColor="White"
                        FontAttributes="None"
@@ -70,12 +72,14 @@
 
             <Frame Margin="0,10, 30, 0"
                    HorizontalOptions="End"
-                   CornerRadius="20">
-                <CollectionView  x:Name="collectionLeagues"
+                   CornerRadius="20"
+                   Style="{DynamicResource Key=FramePrimary}">
+                <CollectionView  x:Name="UserLeagues"
                          Margin="0,0,0,0"
                          HorizontalOptions="CenterAndExpand"
                          ItemsSource="{Binding FavLeagues}"
                          EmptyView="Loading..."
+                         
                                  WidthRequest="230"
                                  HeightRequest="200">
                     
@@ -91,6 +95,10 @@
                 <StackLayout Orientation="Horizontal"
                              HeightRequest="50"
                              VerticalOptions="Center">
+                    <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.CreateFavListCommand, Source={x:Reference UserLeagues}}" CommandParameter="{Binding .}"/>
+
+                        </StackLayout.GestureRecognizers>
 
                     <Frame WidthRequest="20"
                            Padding="5"
@@ -98,17 +106,15 @@
                            HasShadow="False"
                            >
                         <Image Source="{Binding logo}" VerticalOptions="Start"/>
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Path=BindingContext.GoDetailscommand, Source={x:Reference collectionLeagues}}" CommandParameter="{Binding .}"/>
-
-                        </Frame.GestureRecognizers>
+                        
 
                     </Frame>
                     <StackLayout WidthRequest="150">
 
                         <Label Text="{Binding name_translations.en}"
                                FontSize="13"
-                               FontAttributes="Bold"/>
+                               FontAttributes="Bold"
+                               Style="{DynamicResource Key=LabelPrimary}"/>
 
                         <StackLayout Orientation="Horizontal"
                                      WidthRequest="100"
@@ -118,7 +124,8 @@
 
                             
                             <Label Text="{Binding country}"
-                                   FontSize="13"/>
+                                   FontSize="13"
+                                   Style="{DynamicResource Key=LabelPrimary}"/>
 
                         </StackLayout>
                     </StackLayout>
@@ -134,7 +141,78 @@
 
             </Frame>
 
-             
+            <StackLayout Margin="20,30,20,0"
+                         xct:CornerRadiusEffect.CornerRadius="20"
+                         HeightRequest="120"
+                         Padding="10"
+                         Style="{DynamicResource Key=StackPrimary}"
+                        
+                         >
+                <Label Text="Favourite Leagues"
+                       FontAttributes="Bold"
+                       TextDecorations="Underline"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
+            <CollectionView  x:Name="collectionLeagues"
+                             Margin="0,10,0,0"
+                             ItemsSource="{Binding LeaguesUserSelection}"
+                             EmptyView="Select a league"
+                             >
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Horizontal"
+                                 VerticalItemSpacing="0"
+                                 HorizontalItemSpacing="40"
+                                 Span="1"
+                                 />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.DeleteLeagueCommand, Source={x:Reference collectionLeagues}}" CommandParameter="{Binding .}"/>
+
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="{Binding logo}" />
+                        <Label Text="{Binding name_translations.en}"
+                               Style="{DynamicResource Key=LabelPrimary}"/>
+
+                    </StackLayout>
+                    
+                    
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+                
+            </CollectionView>
+
+            </StackLayout>
+
+            <Label Text="*To delete a league, click on the league above and then click 'Yes'."
+                   Margin="40,5,40,0"
+                   Style="{DynamicResource Key=LabelPrimary}"/>
+
+            <Button Text="Save"
+                    Background="#FDCB04"
+                    HorizontalOptions="End"
+                    HeightRequest="30"
+                    WidthRequest="70"
+                    Margin="0, 30,40,0"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Command="{Binding SaveCommand}"
+                    />
+            <StackLayout Orientation="Horizontal"
+                         Margin="30,30,10,0">
+                <Label Style="{DynamicResource Key=LabelPrimary}"
+                       Text="Dark Theme:"
+                       VerticalTextAlignment="Center"/>
+                 <Switch x:Name="theme_swhitch"
+                    Toggled="theme_swhitch_Toggled"
+                    OnColor="#FDCB04"/>
+
+            </StackLayout>
+
+           
 
         </StackLayout>
 

@@ -7,6 +7,7 @@
     Title="Leagues"
     IconImageSource="hamburger.png"
     NavigationPage.IconColor="#ffffff"
+    Style="{DynamicResource Key=PageStyle}"
     >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -46,14 +47,16 @@
                 <Frame CornerRadius="20"
                        HeightRequest="85"
                        Padding="0"
-                       IsClippedToBounds="True">
+                       IsClippedToBounds="True"
+                       Style="{DynamicResource Key=FramePrimary}">
                     <Image Source="Prime Leagues.png"/>
                 </Frame>
                 <Label x:Name="lable_primeLeagues"
                        Text="Prime
                        Leagues"
                        HorizontalTextAlignment="Center"
-                       Margin="0,5,0,0"/>
+                       Margin="0,5,0,0"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
                 
 
             </StackLayout>
@@ -62,13 +65,15 @@
                 <Frame CornerRadius="20"
                        HeightRequest="85"
                        Padding="0"
-                       IsClippedToBounds="True">
+                       IsClippedToBounds="True"
+                       Style="{DynamicResource Key=FramePrimary}">
                     <Image Source="MLS, MX, Concacaf.jpeg"/>
                 </Frame>
                 <Label x:Name="lable_concacafLeagues"
                        Text="USA, MX and CONCACAF"
                        HorizontalTextAlignment="Center"
-                       Margin="0,5,0,0"/>
+                       Margin="0,5,0,0"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
                 
 
             </StackLayout>
@@ -83,7 +88,8 @@
                 <Label x:Name="lable_europeLeagues"
                        Text="Europe Leagues"
                        HorizontalTextAlignment="Center"
-                       Margin="0,5,0,0"/>
+                       Margin="0,5,0,0"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
 
             </StackLayout>
 
@@ -107,7 +113,8 @@
                 <Label x:Name="lable_SALeagues"
                        Text="South America"
                        HorizontalTextAlignment="Center"
-                       Margin="0,5,0,0"/>
+                       Margin="0,5,0,0"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
                 
 
             </StackLayout>
@@ -122,7 +129,8 @@
                 <Label x:Name="lable_asiaAfricaLeagues"
                        Text="Africa and Asia"
                        HorizontalTextAlignment="Center"
-                       Margin="0,5,0,0"/>
+                       Margin="0,5,0,0"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
                 
 
             </StackLayout>
@@ -140,7 +148,8 @@
                 <Label x:Name="lable_internationalLeagues"
                        Text="International"
                        HorizontalTextAlignment="Center"
-                       Margin="0,5,0,0"/>
+                       Margin="0,5,0,0"
+                       Style="{DynamicResource Key=LabelPrimary}"/>
 
             </StackLayout>
 
@@ -195,7 +204,8 @@
             <Label x:Name="labelSeeAll"
                    Text="See all"
                    VerticalOptions="Center"
-                   TextDecorations="Underline"/>
+                   TextDecorations="Underline"
+                   Style="{DynamicResource Key=LabelPrimary}"/>
 
         </StackLayout>
 
@@ -237,7 +247,8 @@
 
                         <Label Text="{Binding name_translations.en}"
                                FontSize="13"
-                               FontAttributes="Bold"/>
+                               FontAttributes="Bold"
+                               Style="{DynamicResource Key=LabelPrimary}"/>
 
                         <StackLayout Orientation="Horizontal"
                                      WidthRequest="100"
@@ -247,7 +258,8 @@
 
                             
                             <Label Text="{Binding country}"
-                                   FontSize="13"/>
+                                   FontSize="13"
+                                   Style="{DynamicResource Key=LabelPrimary}"/>
 
                         </StackLayout>
                     </StackLayout>

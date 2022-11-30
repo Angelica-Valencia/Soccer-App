@@ -25,6 +25,7 @@
   <ItemGroup>
     <Folder Include="View\" />
     <Folder Include="Service\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Service\" />
@@ -33,6 +34,7 @@
     <None Remove="Xamarin.CommunityToolkit" />
     <None Remove="Google.Apis" />
     <None Remove="YoutubeExplode" />
+    <None Remove="Themes\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="LeaguePage.xaml" />

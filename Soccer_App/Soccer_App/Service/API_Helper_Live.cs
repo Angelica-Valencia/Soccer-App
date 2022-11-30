@@ -50,7 +50,7 @@ namespace Soccer_App.Service
             List<DatumEvent> eventListFull = new List<DatumEvent>();
             List<DatumIncidents> incidentsList = new List<DatumIncidents>();
             RootIncidents incidentsRespond = new RootIncidents();
-            HttpClient ApiClient = new HttpClient();
+            HttpClient ApiClient2 = new HttpClient();
 
             List<DatumEvent> events_on_live = await API_Helper_Live.GetEventsLive();
             events_on_live.OrderBy(a => a.id);
@@ -62,7 +62,7 @@ namespace Soccer_App.Service
                 request.Headers.Add("X-RapidAPI-Key", Soccer_API_Key);
                 request.Headers.Add("X-RapidAPI-Host", "sportscore1.p.rapidapi.com");
 
-                HttpResponseMessage response = await ApiClient.SendAsync(request);
+                HttpResponseMessage response = await ApiClient2.SendAsync(request);
 
                 if (response.IsSuccessStatusCode)
                 {

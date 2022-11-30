@@ -11,7 +11,7 @@ namespace Soccer_App.Service
     public class API_Helper_Leagues
     {
         public const string Soccer_API_Key = "b106e7b2e3mshbff5a41453543e0p11afc9jsn46b94d7dc34f";
-        public const string API_URL = "https://sportscore1.p.rapidapi.com/sports/1/leagues?page=1";
+        public const string API_URL = "https://sportscore1.p.rapidapi.com/sports/1/leagues";
        
 
         public static async Task<int> GetPage()
@@ -39,7 +39,7 @@ namespace Soccer_App.Service
                 }
             }
 
-            return pageResponse.meta.last_page;
+            return pageResponse.meta.last_page?? default(int);
         }
 
 

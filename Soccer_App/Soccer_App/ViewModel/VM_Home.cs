@@ -14,6 +14,7 @@ using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
 using Xamarin.CommunityToolkit.Core;
 using System.ComponentModel;
+using Xamarin.Essentials;
 
 namespace Soccer_App.ViewModel
 {
@@ -26,7 +27,9 @@ namespace Soccer_App.ViewModel
         string videoTitle;
         string videoSubTitle;
         IList<Datum> _leaguesListSeason;
+        IList<Datum> _leaguesSettings;
         DatumEvent _eventSingle;
+        IList<DatumEvent> _listIncidents;
         #endregion
 
         #region: CONSTRUCTORS
@@ -36,9 +39,9 @@ namespace Soccer_App.ViewModel
             Task.Run(DisplayMedia);
             Task.Run(GetLeaguesHome);
             Task.Run(GetLiveSingleEvent);
-
-
+            Task.Run(GetListUser);
         }
+
         #endregion
 
 
@@ -94,6 +97,20 @@ namespace Soccer_App.ViewModel
                 OnPropertyChanged();
             }
         }
+        public IList<Datum> LeaguesSettings
+        {
+            get
+            {
+                if (_leaguesSettings == null)
+                    _leaguesSettings = new ObservableCollection<Datum>();
+                return _leaguesSettings;
+            }
+            set
+            {
+                SetValue(ref _leaguesSettings, value);
+                OnPropertyChanged();
+            }
+        }
 
         public DatumEvent EventSingle
         {
@@ -106,6 +123,21 @@ namespace Soccer_App.ViewModel
                 SetValue(ref _eventSingle, value);
             }
         }
+        public IList<DatumEvent> ListIncidents
+        {
+            get
+            {
+                if (_listIncidents == null)
+                    _listIncidents = new ObservableCollection<DatumEvent>();
+                return _listIncidents;
+            }
+            set
+            {
+                SetValue(ref _listIncidents, value);
+                OnPropertyChanged();
+            }
+        }
+
 
 
         #endregion
@@ -115,7 +147,7 @@ namespace Soccer_App.ViewModel
 
         public async Task DisplayMedia()
         {
-            var media = await API_Helper_Home.GetMediaVideo();
+            var media = await API_Helper_Home.GetMediaVideo(LeaguesSettings);
             string videoURL = media[0].url;
             VideoTitle = media[0].title.en;
             VideoSubTitle = media[0].sub_title;
@@ -136,10 +168,10 @@ namespace Soccer_App.ViewModel
 
         public async Task GetLeaguesHome()
         {
-            var leaguesHome = await API_Helper_Home.GetSeason();
+            var leaguesHome = await API_Helper_Home.GetSeason(LeaguesSettings);
             leaguesHome.OrderBy(a => a.league_id);
             List<int?> league_id = new List<int?>();
-            var leagueFull = await API_Helper_Leagues.GetMedia();
+            var leaguesFull = await API_Helper_Home.GetMedia();
             List<int?> leagues_selection = new List<int?>();
 
             for (int i = 0; i < leaguesHome.Count; i++)
@@ -156,20 +188,22 @@ namespace Soccer_App.ViewModel
                 }
                 else
                 {
-                    leagues_selection.Add(leaguesHome[i].league_id);
+                    leagues_selection.Add(leaguesHome[i].league_id);    
                 }
             }
 
-            LeaguesListSeason = leagueFull.Join(leagues_selection,
-                                                 full => full.id,
-                                                 season => season,
-                                                 (full, season) => new Datum
-                                                 {
-                                                     id = full.id,
-                                                     logo = full.logo,
-                                                     name_translations = full.name_translations
-                                                 }).ToList();
 
+            for(int i = 0; i < leaguesFull.Count; i++)
+            {
+                foreach(int? item in leagues_selection)
+                {
+                    if (leaguesFull[i].id == item)
+                    {
+                        LeaguesListSeason.Add(leaguesFull[i]);
+                    }
+                }
+                
+            }
             
 
         }
@@ -183,6 +217,10 @@ namespace Soccer_App.ViewModel
             int day = currentTime.Day;
 
             string fullTime;
+            string fullDate;
+            int year_game;
+            int month_game;
+            int day_game;
             int hour;
             int min;
             int sec;
@@ -190,40 +228,43 @@ namespace Soccer_App.ViewModel
             DateTime now = DateTime.Now.ToUniversalTime();
             string current;
 
-            var eventsInfo = await API_Helper_Live.GetIncidentsLive();
+            ListIncidents = await API_Helper_Home.GetIncidentsLive();
 
 
 
-            for (int i = 0; i < eventsInfo.Count; i++)
+            for (int i = 0; i < ListIncidents.Count; i++)
             {
-
-                fullTime = eventsInfo[i].start_at.Split(' ')[1];
+                fullDate = ListIncidents[i].start_at.Split(' ')[0];
+                year_game = Int32.Parse(fullDate.Split('-')[0]);
+                month_game = Int32.Parse(fullDate.Split('-')[1]);
+                day_game = Int32.Parse(fullDate.Split('-')[2]);
+                fullTime = ListIncidents[i].start_at.Split(' ')[1];
                 hour = Int32.Parse(fullTime.Split(':')[0]);
                 min = Int32.Parse(fullTime.Split(':')[1]);
                 sec = Int32.Parse(fullTime.Split(':')[2]);
 
-                DateTime game_time_start = new DateTime(DateTime.Now.Year,
-                                           DateTime.Now.Month,
-                                           DateTime.Now.Day, hour, min, sec);
+                DateTime game_time_start = new DateTime(year_game,
+                                           month_game,
+                                           day_game, hour, min, sec);
 
-                if (eventsInfo[i].status_more == "1st half")
+                if (ListIncidents[i].status_more == "1st half")
                 {
                     current = (now - game_time_start).ToString();
                     current = current.Split(':')[1];
-                    eventsInfo[i].current_time = current;
+                    ListIncidents[i].current_time = current;
                 }
-                else if (eventsInfo[i].status_more == "2nd half")
+                else if (ListIncidents[i].status_more == "2nd half")
                 {
-                    foreach (DatumIncidents item in eventsInfo[i].dataIncidents)
+                    foreach (DatumIncidents item in ListIncidents[i].dataIncidents)
                     {
                         if (item.incident_type == "injuryTime")
                         {
-                            game_time_start = new DateTime(DateTime.Now.Year,
-                                           DateTime.Now.Month,
-                                           DateTime.Now.Day, hour, min + item.length ?? default(int) + 15, sec);
+                            game_time_start = new DateTime(year_game,
+                                           month_game,
+                                           day_game, hour, min + item.length ?? default(int) + 15, sec);
                             current = (now - game_time_start).ToString();
                             current = current.Split(':')[1];
-                            eventsInfo[i].current_time = current;
+                            ListIncidents[i].current_time = current;
                         }
                     }
 
@@ -232,14 +273,21 @@ namespace Soccer_App.ViewModel
                 else
                 {
                     current = "";
-                    eventsInfo[i].current_time = current;
+                    ListIncidents[i].current_time = current;
                 }
 
-                eventsInfo.OrderBy(a => a.section.priority);
+                ListIncidents.OrderBy(a => a.section.priority);
 
-                EventSingle = eventsInfo[0];
+                EventSingle = ListIncidents[0];
+                
 
             }
+        }
+
+        public void GetListUser()
+        {
+            LeaguesSettings = new VM_Settings(Navigation).LeaguesUserSelection;
+            
         }
 
             #endregion

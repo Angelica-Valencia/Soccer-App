@@ -65,6 +65,10 @@ namespace Soccer_App.ViewModel
             int day = currentTime.Day;
 
             string fullTime;
+            string fullDate;
+            int year_game;
+            int month_game;
+            int day_game;
             int hour;
             int min;
             int sec;
@@ -78,15 +82,18 @@ namespace Soccer_App.ViewModel
 
             for(int i = 0; i < eventsInfo.Count;i++)
             {
-                    
+                fullDate = eventsInfo[i].start_at.Split(' ')[0];
+                year_game = Int32.Parse(fullDate.Split('-')[0]);
+                month_game = Int32.Parse(fullDate.Split('-')[1]);
+                day_game = Int32.Parse(fullDate.Split('-')[2]);
                 fullTime = eventsInfo[i].start_at.Split(' ')[1];
                 hour = Int32.Parse(fullTime.Split(':')[0]);
                 min = Int32.Parse(fullTime.Split(':')[1]);
                 sec = Int32.Parse(fullTime.Split(':')[2]);
 
-                DateTime game_time_start = new DateTime(DateTime.Now.Year,
-                                           DateTime.Now.Month,
-                                           DateTime.Now.Day, hour, min, sec);
+                DateTime game_time_start = new DateTime(year_game,
+                                           month_game,
+                                           day_game, hour, min, sec);
 
                 if (eventsInfo[i].status_more == "1st half")
                 {
@@ -100,9 +107,9 @@ namespace Soccer_App.ViewModel
                     {
                         if(item.incident_type== "injuryTime")
                         {
-                            game_time_start = new DateTime(DateTime.Now.Year,
-                                           DateTime.Now.Month,
-                                           DateTime.Now.Day, hour, min + item.length?? default(int) +15, sec);
+                            game_time_start = new DateTime(year_game,
+                                           month_game,
+                                           day_game, hour, min + item.length?? default(int) +15, sec);
                             current = (now - game_time_start).ToString();
                             current = current.Split(':')[1];
                             eventsInfo[i].current_time = current;
