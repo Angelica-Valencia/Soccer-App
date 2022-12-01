@@ -1,48 +1,43 @@
 ﻿<Properties StartupConfiguration="{4C0E9766-CDB9-466E-914F-C815C2C6F49D}|Default">
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />
-      <Breakpoint file="/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/Service/API_Helper_Home.cs" relfile="Soccer_App/Soccer_App/Service/API_Helper_Home.cs" line="22" column="1" />
-      <Breakpoint file="/Users/angelicavalencia/Documents/Angelica Valencia/Programming/Soccer_App/Soccer_App/Soccer_App/ViewModel/VM_Settings.cs" relfile="Soccer_App/Soccer_App/ViewModel/VM_Settings.cs" line="196" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/View/LeaguesPage.xaml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.Soccer__App.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8FC422F7-01CB-48C3-A01A-0B9055E1EF7A" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Soccer_App/Soccer_App/Service/API_Helper_Home.cs">
     <Files>
-      <File FileName="Soccer_App/Soccer_App/View/SettingsPage.xaml" Line="155" Column="24" />
-      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" Line="69" Column="66" />
+      <File FileName="Soccer_App/Soccer_App/View/SettingsPage.xaml" Line="151" Column="6" />
+      <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Settings.cs" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/BaseViewModel.cs" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Live.cs" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Template.cs" />
-      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" Line="115" Column="9" />
+      <File FileName="Soccer_App/Soccer_App/ViewModel/VM_Home.cs" Line="150" Column="1" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeaguesList.cs" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/VM_LeagueDetails.cs" />
       <File FileName="Soccer_App/Soccer_App/View/SettingsPage.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/View/LivePage.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/View/LeaguesPage.xaml.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/View/LeagueDetails.xaml.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml" Line="91" Column="26" />
+      <File FileName="Soccer_App/Soccer_App/View/HomePage.xaml" />
       <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Settings.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/LivePage.xaml" Line="106" Column="80" />
+      <File FileName="Soccer_App/Soccer_App/View/LivePage.xaml" />
       <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Live.cs" />
-      <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Home.cs" />
+      <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Home.cs" Line="351" Column="12" />
       <File FileName="Soccer_App/Soccer_App/Service/API_Helper_Leagues.cs" />
       <File FileName="Soccer_App/Soccer_App/Model/LeguesModel2.cs" />
       <File FileName="Soccer_App/Soccer_App/Model/EventsModel.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/MyNavigationShell.xaml.cs" Line="13" Column="74" />
+      <File FileName="Soccer_App/Soccer_App/View/MyNavigationShell.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/ViewModel/MyCollection.cs" />
-      <File FileName="Soccer_App/Soccer_App/Themes/LightTheme.xaml" Line="16" Column="31" />
+      <File FileName="Soccer_App/Soccer_App/Themes/LightTheme.xaml" />
       <File FileName="Soccer_App/Soccer_App/Themes/LightTheme.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/Themes/DarkTheme.xaml" />
       <File FileName="Soccer_App/Soccer_App/Themes/DarkTheme.xaml.cs" />
       <File FileName="Soccer_App/Soccer_App/App.xaml" />
       <File FileName="Soccer_App/Soccer_App/App.xaml.cs" />
-      <File FileName="Soccer_App/Soccer_App/View/MyNavigationShell.xaml" Line="47" Column="8" />
+      <File FileName="Soccer_App/Soccer_App/View/MyNavigationShell.xaml" />
+      <File FileName="Soccer_App/Soccer_App/Model/SeasonsModel.cs" />
+      <File FileName="Soccer_App/Soccer_App/Model/MediaModel.cs" />
+      <File FileName="Soccer_App/Soccer_App.iOS/Main.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -51,7 +46,9 @@
             <Node name="Soccer_App" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Model" expanded="True" />
-              <Node name="Service" expanded="True" />
+              <Node name="Service" expanded="True">
+                <Node name="API_Helper_Home.cs" selected="True" />
+              </Node>
               <Node name="Themes" expanded="True">
                 <Node name="DarkTheme.xaml" expanded="True" />
                 <Node name="LightTheme.xaml" expanded="True" />
@@ -59,7 +56,7 @@
               <Node name="View" expanded="True">
                 <Node name="HomePage.xaml" expanded="True" />
                 <Node name="LeagueDetails.xaml" expanded="True" />
-                <Node name="LeaguesPage.xaml" expanded="True" selected="True" />
+                <Node name="LeaguesPage.xaml" expanded="True" />
                 <Node name="LivePage.xaml" expanded="True" />
                 <Node name="MyNavigationShell.xaml" expanded="True" />
                 <Node name="SettingsPage.xaml" expanded="True" />
@@ -75,5 +72,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Soccer__App.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8FC422F7-01CB-48C3-A01A-0B9055E1EF7A" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
 </Properties>

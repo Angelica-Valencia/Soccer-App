@@ -25,7 +25,6 @@ namespace Soccer_App.ViewModel
         IList<Datum> _favLeagues;
         IList<Datum> _favLeaguesBackup;
         IList<Datum> _leaguesUserSelection;
-        bool _wasToggled;
 
         #endregion
         #region CONSTRUCTOR
@@ -38,18 +37,7 @@ namespace Soccer_App.ViewModel
         #endregion
         #region PROPERTIES
         //public Command<TextChangedEventArgs> SearchFavCommand { get; }
-        public bool WasToggled
-        {
-            get
-            {
-                return _wasToggled;
-            }
-            set
-            {
-                SetValue(ref _wasToggled, value);
-            }
-        }
-
+        
         public IList<Datum> FavLeagues
         {
             get
@@ -111,7 +99,7 @@ namespace Soccer_App.ViewModel
 
         public async Task GetAllLeagues()
         {
-            var allLeagues = await API_Helper_Leagues.GetMedia();
+            var allLeagues = await API_Helper_Settings.GetMedia();
             for (int i = 0; i < allLeagues.Count; i++)
             {
 
@@ -187,35 +175,28 @@ namespace Soccer_App.ViewModel
 
         public async Task Save()
         {
-            
+            if(App.LeaguesPreferences.Count() > 0)
+            {
+
+                App.LeaguesPreferences.Clear();
+            }
+
+            foreach(Datum item in LeaguesUserSelection)
+            {
+                App.LeaguesPreferences.Add(item);
+            }
+               
             await Navigation.PushAsync(new View.HomePage());
             
         }
 
-        //public void Toggled()
-        //{
-        //    //bool theme = switched.Value;
-        //    Application.Current.Resources.MergedDictionaries.Clear(); //Clear any theme data
-        //    if (WasToggled)
-        //    {
-        //        //dark mode
-        //        Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
-        //    }
-        //    else
-        //    {
-        //        //light mode
-        //        Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
-        //    }
-
-        //}
+      
         #endregion
         #region COMMANDS
         public ICommand CreateFavListCommand => new Command<Datum>(async (l) => await CreateFavList(l));
         public ICommand DeleteLeagueCommand => new Command<Datum>(async (l) => await DeleteLeague(l));
         public ICommand SearchFavCommand => new Command<TextChangedEventArgs>(SearchFav);
-        //public ICommand ToggledCommand => new Command(Toggled);
         public ICommand SaveCommand => new Command(async () => await Save());
-        //public ICommand CreateFavListCommand => new Command<Datum>(CreateFavList);
         #endregion
     }
 }

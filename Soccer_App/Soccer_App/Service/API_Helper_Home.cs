@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Soccer_App.ViewModel;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
 
 namespace Soccer_App.Service
 {
@@ -65,77 +66,29 @@ namespace Soccer_App.Service
 
                 foreach (DatumSeason item in seasonRespond.data)
                 {
-                    if (item.year_end >= currentTime.Year)
+                    if(item.year_start >= currentTime.Year)
                     {
                         seasonList.Add(item);
                     }
+                    //if(item.year_end is null)
+                    //{
+                    //    seasonList.Add(item);
+                    //}
+                    //else if ((item.year_end?? default(int))>= currentTime.Year)
+                    //{
+                    //    seasonList.Add(item);
+                    //}
                 }
             }
-
             return seasonList;
 
         }
 
-
-        public static async Task<List<DatumEvent>> GetEventId(IList<Datum> leagueSettings)
+        public static async Task<int> GetPageEvent(DatumSeason mySeaons)
         {
-            List<DatumEvent> eventList = new List<DatumEvent>();
-            RootEvent eventRespond = new RootEvent();
+            RootEvent pageResponse = new RootEvent();
             HttpClient ApiClient = new HttpClient();
-            DateTime currentTime = DateTime.Now;
-
-            List<DatumSeason> mySeaons = await API_Helper_Home.GetSeason(leagueSettings);
-
-            for (int i = 0; i < mySeaons.Count; i++)
-            {
-
-                var request = new HttpRequestMessage(HttpMethod.Get, $"https://sportscore1.p.rapidapi.com/seasons/{mySeaons[i].id}/events");
-
-                request.Headers.Add("X-RapidAPI-Key", Soccer_API_Key);
-                request.Headers.Add("X-RapidAPI-Host", "sportscore1.p.rapidapi.com");
-
-                HttpResponseMessage response = await ApiClient.SendAsync(request);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    eventRespond = JsonConvert.DeserializeObject<RootEvent>(content);
-                }
-
-                foreach (DatumEvent item in eventRespond.data)
-                {
-                    if (item.status == "finished")
-                    {
-                        eventList.Add(item);
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-            }
-
-            return eventList;
-        }
-
-        public static async Task<int?> EventsList(IList<Datum> leagueSettings)
-        {
-            var events = await GetEventId(leagueSettings);
-            events = events.OrderBy(a => a.start_at).ToList();
-            int lastEvent = events.Count;
-            //return events[lastEvent - 1].id;
-            return events[0].id;
-
-        }
-
-        public static async Task<List<DatumMedia>> GetMediaVideo(IList<Datum> leagueSettings)
-        {
-            List<DatumMedia> mediaVideo = new List<DatumMedia>();
-            int? eventId = await API_Helper_Home.EventsList(leagueSettings);
-            HttpClient ApiClient = new HttpClient();
-            RootMedia mediaRespond = new RootMedia()
-;
-            var request = new HttpRequestMessage(HttpMethod.Get, $"https://sportscore1.p.rapidapi.com/events/{eventId}/medias");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"https://sportscore1.p.rapidapi.com/seasons/{mySeaons.id}/events?page=1");
 
             request.Headers.Add("X-RapidAPI-Key", Soccer_API_Key);
             request.Headers.Add("X-RapidAPI-Host", "sportscore1.p.rapidapi.com");
@@ -145,10 +98,180 @@ namespace Soccer_App.Service
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
-                mediaRespond = JsonConvert.DeserializeObject<RootMedia>(content);
+
+                try
+                {
+                    pageResponse = JsonConvert.DeserializeObject<RootEvent>(content);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
-            mediaVideo = mediaRespond.data.ToList();
+            return pageResponse.meta.last_page ?? default(int);
+        }
+
+        public static async Task<List<DatumEvent>> GetEventId(IList<Datum> leagueSettings)
+        {
+            List<DatumEvent> eventList = new List<DatumEvent>();
+            DatumEvent eventPartial = new DatumEvent();
+            List<DatumEvent> eventListPartial = new List<DatumEvent>();
+            RootEvent eventRespond = new RootEvent();
+            HttpClient ApiClient = new HttpClient();
+            DateTime currentTime = DateTime.Now;
+            
+            int counter = 0;
+            bool isLastPage = true;
+
+            List<DatumSeason> mySeaons = await API_Helper_Home.GetSeason(leagueSettings);
+            
+
+            for (int i = 0; i < mySeaons.Count; i++)
+            {
+                int pageNumber = await API_Helper_Home.GetPageEvent(mySeaons[i]);
+                while (isLastPage)
+                {
+                    var request = new HttpRequestMessage(HttpMethod.Get, $"https://sportscore1.p.rapidapi.com/seasons/{mySeaons[i].id}/events?page={pageNumber}");
+
+                    request.Headers.Add("X-RapidAPI-Key", Soccer_API_Key);
+                    request.Headers.Add("X-RapidAPI-Host", "sportscore1.p.rapidapi.com");
+
+
+                    HttpResponseMessage response = await ApiClient.SendAsync(request);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        eventRespond = JsonConvert.DeserializeObject<RootEvent>(content);
+                    }
+
+                    foreach (DatumEvent item in eventRespond.data)
+                    {
+                        if (item.status == "finished")
+                        {
+                            eventListPartial.Add(item);
+                        }
+                        else
+                        {
+                            continue;
+                        }
+
+                    }
+                    counter += 1;
+
+                    if (counter == pageNumber)
+                    {
+                        isLastPage = false;
+                        
+                    }
+                }
+
+                if(eventListPartial.Count() == 0)
+                {
+                    eventList.Add(eventPartial);
+                }
+                else
+                {
+                    eventPartial = eventListPartial.OrderByDescending(a => a.start_at).First();
+                    eventList.Add(eventPartial);
+                }
+                
+                eventListPartial.Clear();
+                isLastPage = true;
+                counter = 0;
+
+            }
+
+            return eventList;
+        }
+
+        public static async Task<List<int>> EventsList(IList<Datum> leagueSettings)
+        {
+            var events = await GetEventId(leagueSettings);
+            events = events.OrderBy(a => a.league_id).ThenByDescending(a => a.start_at).ToList();
+            List<int> eventList = new List<int>();
+            List<DatumEvent> listTrial = new List<DatumEvent>();
+
+
+            for (int i = 0; i < events.Count; i++)
+            {
+                listTrial.Add(events[i]);
+                if (i == 0)
+                {
+                    eventList.Add(events[i].id ?? default(int));
+                }
+                else if (events[i].league_id == listTrial[i - 1].league_id)
+                {
+                    continue;
+                }
+                else
+                {
+                    eventList.Add(events[i].id ?? default(int));
+                }
+            }
+
+            //events = events.OrderBy(a => a.start_at).ToList();
+            //int lastEvent = events.Count;
+            return eventList;
+            //return events[0].id;
+
+        }
+
+        public static async Task<List<DatumMedia>> GetMediaVideo(IList<Datum> leagueSettings)
+        {
+            List<DatumMedia> mediaVideo = new List<DatumMedia>();
+            List<int> eventId = await API_Helper_Home.EventsList(leagueSettings);
+
+            //var events = await GetEventId(leagueSettings);
+            //events = events.OrderByDescending(a => a.start_at).ToList();
+            //int lastEvent = events.Count;
+            //bool mediaIsNull = true;
+
+            HttpClient ApiClient = new HttpClient();
+            RootMedia mediaRespond = new RootMedia();
+
+            for(int i = 0; i < eventId.Count ; i++)
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, $"https://sportscore1.p.rapidapi.com/events/{eventId[i]}/medias?page=1");
+
+                request.Headers.Add("X-RapidAPI-Key", Soccer_API_Key);
+                request.Headers.Add("X-RapidAPI-Host", "sportscore1.p.rapidapi.com");
+
+                HttpResponseMessage response = await ApiClient.SendAsync(request);
+
+                if (response.IsSuccessStatusCode)
+                {
+
+                    var content = await response.Content.ReadAsStringAsync();
+
+                    if(content == "{\"data\":[],\"meta\":{\"current_page\":1,\"from\":null,\"per_page\":50,\"to\":null}}")
+                    {
+                        continue;
+                    }
+                    mediaRespond = JsonConvert.DeserializeObject<RootMedia>(content);
+
+                    if (mediaRespond.data[0].source_url is null)
+                    {
+                        continue;
+                    }
+                    {
+                        mediaVideo = mediaRespond.data.ToList();
+                        break;
+                    }
+
+                    //if (response.RequestMessage.Content is null)
+                    //{
+                    //    continue;
+                    //}
+                    //else
+                    //{
+                       
+                        
+                    //}
+                    
+                }
+            }
             return mediaVideo;
         }
 

@@ -36,10 +36,10 @@ namespace Soccer_App.ViewModel
         public VM_Home(INavigation navigation)
         {
             Navigation = navigation;
-            Task.Run(DisplayMedia);
-            Task.Run(GetLeaguesHome);
-            Task.Run(GetLiveSingleEvent);
             Task.Run(GetListUser);
+            Task.Run(GetLiveSingleEvent);
+            
+
         }
 
         #endregion
@@ -148,6 +148,11 @@ namespace Soccer_App.ViewModel
         public async Task DisplayMedia()
         {
             var media = await API_Helper_Home.GetMediaVideo(LeaguesSettings);
+            if(media.Count() == 0)
+            {
+                IList<Datum> defaultLeague = new ObservableCollection<Datum>();
+                media = await API_Helper_Home.GetMediaVideo(defaultLeague);
+            }
             string videoURL = media[0].url;
             VideoTitle = media[0].title.en;
             VideoSubTitle = media[0].sub_title;
@@ -204,8 +209,8 @@ namespace Soccer_App.ViewModel
                 }
                 
             }
-            
 
+            await DisplayMedia();
         }
 
         public async Task GetLiveSingleEvent()
@@ -284,9 +289,21 @@ namespace Soccer_App.ViewModel
             }
         }
 
-        public void GetListUser()
+        public async Task GetListUser()
         {
-            LeaguesSettings = new VM_Settings(Navigation).LeaguesUserSelection;
+            LeaguesSettings = App.LeaguesPreferences;
+
+            if(LeaguesSettings.Count == 0)
+            {
+                await GetLeaguesHome();
+            }
+            else
+            {
+                LeaguesListSeason = LeaguesSettings;
+                await DisplayMedia();
+                await GetListUser();
+            }
+            
             
         }
 

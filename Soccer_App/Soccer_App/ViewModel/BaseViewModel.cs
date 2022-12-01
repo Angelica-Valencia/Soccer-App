@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Runtime.CompilerServices;
-
+using Soccer_App.Model;
+using System.Collections.ObjectModel;
 
 namespace Soccer_App.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
         public INavigation Navigation;
+        IList<Datum> _leaguesPreferences;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -22,6 +24,20 @@ namespace Soccer_App.ViewModel
             set
             {
                 foto = value;
+                OnPropertyChanged();
+            }
+        }
+        public IList<Datum> LeaguesPreferences
+        {
+            get
+            {
+                if (_leaguesPreferences == null)
+                    _leaguesPreferences = new ObservableCollection<Datum>();
+                return _leaguesPreferences;
+            }
+            set
+            {
+                SetValue(ref _leaguesPreferences, value);
                 OnPropertyChanged();
             }
         }
